@@ -1,104 +1,146 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useRef, type ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-type TutorialStep = {
-  id: string;
-  text: string;
-  subtext?: string;
-};
+export type SpotlightTarget = 
+  | 'overview_welcome'
+  | 'voice_record'
+  | 'voice_upload'
+  | 'pricing_fair'
+  | 'logistics_book'
+  | 'ledger_verify'
+  | null;
 
-type TutorialContextType = {
-  activeSpotlightId: string | null;
-  setSpotlight: (id: string | null) => void;
-  registerSpotlight: (step: TutorialStep) => void;
-};
+interface TutorialContextType {
+  spotlight: SpotlightTarget;
+  setSpotlight: (target: SpotlightTarget) => void;
+  registerTarget: (id: SpotlightTarget, element: HTMLElement | null) => void;
+}
 
 const TutorialContext = createContext<TutorialContextType | undefined>(undefined);
 
-export const TutorialProvider = ({ children }: { children: ReactNode }) => {
-  const [activeSpotlightId, setActiveSpotlightId] = useState<string | null>(null);
-  const [spotlights, setSpotlights] = useState<Record<string, TutorialStep>>({});
+export function TutorialProvider({ children }: { children: ReactNode }) {
+  const [spotlight, setSpotlight] = useState<SpotlightTarget>(null);
+  const targets = useRef<Record<string, HTMLElement>>({});
+  const [rect, setRect] = useState<DOMRect | null>(null);
 
-  const setSpotlight = (id: string | null) => setActiveSpotlightId(id);
-
-  const registerSpotlight = (step: TutorialStep) => {
-    setSpotlights((prev) => ({ ...prev, [step.id]: step }));
-  };
-
-  const activeStep = activeSpotlightId ? spotlights[activeSpotlightId] : null;
-
-  return (
-    <TutorialContext.Provider value={{ activeSpotlightId, setSpotlight, registerSpotlight }}>
-      {children}
-
-      {/* Spotlight Overlay */}
-      {activeSpotlightId && activeStep && (
-        <div
-          className="fixed inset-0 z-50 pointer-events-none animate-fade-in"
-          style={{ backgroundColor: 'rgba(15, 13, 40, 0.65)', backdropFilter: 'blur(3px)' }}
-        >
-          {/* Bottom floating tooltip */}
-          <div
-            className="absolute bottom-8 left-1/2 pointer-events-auto animate-slide-up"
-            style={{ transform: 'translateX(-50%)', maxWidth: '420px', width: 'calc(100vw - 48px)' }}
-          >
-            <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
-              {/* Orange top bar */}
-              <div className="h-1 bg-primary" />
-              <div className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary text-xl">💡</span>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-secondary font-semibold text-base leading-snug">{activeStep.text}</p>
-                    {activeStep.subtext && (
-                      <p className="text-secondary/50 text-sm mt-1">{activeStep.subtext}</p>
-                    )}
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSpotlight(null)}
-                  className="btn-primary w-full mt-5 text-base py-3"
-                >
-                  Got it! ✓
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </TutorialContext.Provider>
-  );
-};
-
-export const useTutorial = () => {
-  const context = useContext(TutorialContext);
-  if (!context) throw new Error('useTutorial must be used within a TutorialProvider');
-  return context;
-};
-
-export const SpotlightElement = ({
-  id,
-  instructionText,
-  subtext,
-  children,
-  className = '',
-}: {
-  id: string;
-  instructionText: string;
-  subtext?: string;
-  children: ReactNode;
-  className?: string;
-}) => {
-  const { activeSpotlightId, registerSpotlight } = useTutorial();
+  const registerTarget = useCallback((id: SpotlightTarget, element: HTMLElement | null) => {
+    if (!id) return;
+    if (element) {
+      targets.current[id] = element;
+    } else {
+      delete targets.current[id];
+    }
+  }, []);
 
   useEffect(() => {
-    registerSpotlight({ id, text: instructionText, subtext });
-  }, [id, instructionText, subtext]);
+    if (spotlight && targets.current[spotlight]) {
+      const updateRect = () => {
+        const el = targets.current[spotlight];
+        if (el) setRect(el.getBoundingClientRect());
+      };
+      updateRect();
+      window.addEventListener('resize', updateRect);
+      window.addEventListener('scroll', updateRect, true);
+      return () => {
+        window.removeEventListener('resize', updateRect);
+        window.removeEventListener('scroll', updateRect, true);
+      };
+    } else {
+      setRect(null);
+    }
+  }, [spotlight]);
 
   return (
-    <div className={`${className} ${activeSpotlightId === id ? 'spotlight-active' : ''} transition-shadow duration-300`}>
+    <TutorialContext.Provider value={{ spotlight, setSpotlight, registerTarget }}>
       {children}
-    </div>
+      
+      <AnimatePresence>
+        {spotlight && rect && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 pointer-events-none"
+          >
+            {/* Dimmed background overlay outside the spotlight */}
+            <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />
+            
+            {/* Spotlight Hole */}
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+              className="absolute bg-transparent shadow-[0_0_0_9999px_rgba(0,0,0,0.6)] rounded-2xl pointer-events-none border-2 border-white/20"
+              style={{
+                top: rect.top - 8,
+                left: rect.left - 8,
+                width: rect.width + 16,
+                height: rect.height + 16,
+              }}
+            />
+
+            {/* Tooltip Content */}
+            <motion.div
+              layout
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="absolute pointer-events-auto"
+              style={{
+                top: rect.bottom + 20,
+                left: Math.max(10, Math.min(window.innerWidth - 320, rect.left)),
+              }}
+            >
+              <div className="liquid-glass rounded-2xl p-5 w-80 flex flex-col gap-3 shadow-2xl">
+                <div className="flex justify-between items-start">
+                  <h4 className="font-['Instrument_Serif'] italic text-2xl text-white">AI Spotlight</h4>
+                  <button 
+                    onClick={() => setSpotlight(null)}
+                    className="text-white/40 hover:text-white transition-colors text-sm font-bold"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <p className="text-sm text-white/70 leading-relaxed">
+                  {getTooltipContent(spotlight)}
+                </p>
+                <div className="flex justify-end mt-2">
+                  <button 
+                    onClick={() => setSpotlight(null)}
+                    className="bg-white text-black px-4 py-2 rounded-full text-xs font-semibold hover:bg-white/90"
+                  >
+                    Got it
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </TutorialContext.Provider>
   );
-};
+}
+
+export function useTutorial() {
+  const context = useContext(TutorialContext);
+  if (!context) throw new Error("useTutorial must be used within TutorialProvider");
+  return context;
+}
+
+function getTooltipContent(spotlight: SpotlightTarget): string {
+  switch (spotlight) {
+    case 'overview_welcome':
+      return "Welcome to the She Can Market Platform. From here, you can record voice listings, check fair AI pricing, or book peer-to-peer logistics.";
+    case 'voice_record':
+      return "Tap here to describe your product in your local language (e.g. Hindi, Kannada). Our AI will automatically translate it and generate a professional English listing!";
+    case 'pricing_fair':
+      return "This is the true, data-driven fair price for your craft. Don't let middlemen undercut you—use this as your negotiation baseline.";
+    case 'logistics_book':
+      return "Book shared transport with other artisans heading to the same market. This slashes your travel costs by splitting the vehicle fare.";
+    case 'ledger_verify':
+      return "Every step of your product's journey is secured here. Buyers can scan a QR code to verify authenticity and trace it back to you.";
+    default:
+      return "";
+  }
+}
