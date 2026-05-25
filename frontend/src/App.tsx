@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TutorialProvider, useTutorial } from './TutorialContext';
-import { Mic, BarChart2, Truck, ShieldCheck, Home, HelpCircle, X } from 'lucide-react';
+import { Mic, BarChart2, Truck, ShieldCheck, Home, HelpCircle } from 'lucide-react';
 
 import Overview from './components/Overview';
 import VoiceStorefront from './components/VoiceStorefront';

@@ -1,4 +1,4 @@
-import { ShieldCheck, MapPin, Truck, LayoutList, TrendingUp, Star } from 'lucide-react';
+import { ShieldCheck, MapPin, Truck, LayoutList, TrendingUp } from 'lucide-react';
 import { SpotlightElement } from '../TutorialContext';
 
 const MetricCard = ({

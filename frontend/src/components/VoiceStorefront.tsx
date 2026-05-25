@@ -31,7 +31,7 @@ export default function VoiceStorefront() {
       // Use demo data if backend is unavailable
       setResult({
         title: 'Handwoven Udupi Cotton Saree',
-        description: 'A beautiful naturally-dyed cotton saree hand-woven by artisans in the Udupi district. Each thread carries the heritage of Karnataka's craft tradition.',
+        description: "A beautiful naturally-dyed cotton saree hand-woven by artisans in the Udupi district. Each thread carries the heritage of Karnataka's craft tradition.",
         tags: ['handloom', 'udupi', 'natural-dye', 'cotton', 'traditional'],
       });
     } finally {

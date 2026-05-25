@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IndianRupee, Clock, Award, Loader2, TrendingUp, Info } from 'lucide-react';
+import { IndianRupee, Clock, Loader2, TrendingUp, Info } from 'lucide-react';
 import { SpotlightElement } from '../TutorialContext';
 import api from '../api';
 
