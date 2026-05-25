@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from .schemas import (
     DemandForecastRequest,
@@ -42,6 +43,14 @@ app = FastAPI(
     title="Artisan Women Market - Member 1 AI Core",
     version="0.1.0",
     description="AI core and commerce engine for underserved women artisan communities.",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

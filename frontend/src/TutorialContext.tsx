@@ -1,43 +1,69 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+
+type TutorialStep = {
+  id: string;
+  text: string;
+  subtext?: string;
+};
 
 type TutorialContextType = {
   activeSpotlightId: string | null;
   setSpotlight: (id: string | null) => void;
-  registerSpotlight: (id: string, text: string) => void;
-  spotlights: Record<string, string>;
+  registerSpotlight: (step: TutorialStep) => void;
 };
 
 const TutorialContext = createContext<TutorialContextType | undefined>(undefined);
 
 export const TutorialProvider = ({ children }: { children: ReactNode }) => {
   const [activeSpotlightId, setActiveSpotlightId] = useState<string | null>(null);
-  const [spotlights, setSpotlights] = useState<Record<string, string>>({});
+  const [spotlights, setSpotlights] = useState<Record<string, TutorialStep>>({});
 
-  const setSpotlight = (id: string | null) => {
-    setActiveSpotlightId(id);
+  const setSpotlight = (id: string | null) => setActiveSpotlightId(id);
+
+  const registerSpotlight = (step: TutorialStep) => {
+    setSpotlights((prev) => ({ ...prev, [step.id]: step }));
   };
 
-  const registerSpotlight = (id: string, text: string) => {
-    setSpotlights((prev) => ({ ...prev, [id]: text }));
-  };
+  const activeStep = activeSpotlightId ? spotlights[activeSpotlightId] : null;
 
   return (
-    <TutorialContext.Provider value={{ activeSpotlightId, setSpotlight, registerSpotlight, spotlights }}>
+    <TutorialContext.Provider value={{ activeSpotlightId, setSpotlight, registerSpotlight }}>
       {children}
-      {activeSpotlightId && (
-        <div 
-          className="fixed inset-0 z-50 pointer-events-none transition-all duration-300"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', backdropFilter: 'blur(4px)' }}
+
+      {/* Spotlight Overlay */}
+      {activeSpotlightId && activeStep && (
+        <div
+          className="fixed inset-0 z-50 pointer-events-none animate-fade-in"
+          style={{ backgroundColor: 'rgba(15, 13, 40, 0.65)', backdropFilter: 'blur(3px)' }}
         >
-          {/* A tooltip box that tells the user what to do */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white px-6 py-4 rounded-xl shadow-2xl pointer-events-auto text-center border-2 border-primary max-w-md">
-             <p className="text-secondary text-lg font-medium mb-3">{spotlights[activeSpotlightId]}</p>
-             <button 
-                onClick={() => setSpotlight(null)}
-                className="bg-primary text-white px-6 py-2 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors"
-             >
-               Got it!
-             </button>
+          {/* Bottom floating tooltip */}
+          <div
+            className="absolute bottom-8 left-1/2 pointer-events-auto animate-slide-up"
+            style={{ transform: 'translateX(-50%)', maxWidth: '420px', width: 'calc(100vw - 48px)' }}
+          >
+            <div className="bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+              {/* Orange top bar */}
+              <div className="h-1 bg-primary" />
+              <div className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary text-xl">💡</span>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-secondary font-semibold text-base leading-snug">{activeStep.text}</p>
+                    {activeStep.subtext && (
+                      <p className="text-secondary/50 text-sm mt-1">{activeStep.subtext}</p>
+                    )}
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSpotlight(null)}
+                  className="btn-primary w-full mt-5 text-base py-3"
+                >
+                  Got it! ✓
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -47,34 +73,31 @@ export const TutorialProvider = ({ children }: { children: ReactNode }) => {
 
 export const useTutorial = () => {
   const context = useContext(TutorialContext);
-  if (context === undefined) {
-    throw new Error('useTutorial must be used within a TutorialProvider');
-  }
+  if (!context) throw new Error('useTutorial must be used within a TutorialProvider');
   return context;
 };
 
-// A wrapper component that applies the spotlight styling when active
-export const SpotlightElement = ({ 
-  id, 
-  instructionText, 
-  children, 
-  className = "" 
-}: { 
-  id: string, 
-  instructionText: string, 
-  children: ReactNode,
-  className?: string
+export const SpotlightElement = ({
+  id,
+  instructionText,
+  subtext,
+  children,
+  className = '',
+}: {
+  id: string;
+  instructionText: string;
+  subtext?: string;
+  children: ReactNode;
+  className?: string;
 }) => {
   const { activeSpotlightId, registerSpotlight } = useTutorial();
-  
-  React.useEffect(() => {
-    registerSpotlight(id, instructionText);
-  }, [id, instructionText]);
 
-  const isActive = activeSpotlightId === id;
+  useEffect(() => {
+    registerSpotlight({ id, text: instructionText, subtext });
+  }, [id, instructionText, subtext]);
 
   return (
-    <div className={`${className} ${isActive ? 'spotlight-active' : ''}`}>
+    <div className={`${className} ${activeSpotlightId === id ? 'spotlight-active' : ''} transition-shadow duration-300`}>
       {children}
     </div>
   );
