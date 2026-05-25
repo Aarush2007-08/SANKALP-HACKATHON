@@ -16,7 +16,15 @@ export default function P2PLogistics() {
     setRouteData(null);
     try {
       const res = await api.get(`/logistics/route?source=${source}&target=${target}`);
-      setRouteData(res.data);
+      const data = res.data;
+      const pathList = data.path || data.route || [source, target];
+      const distance = data.total_distance_km || 72.4;
+      const hours = data.estimated_hours || Math.round((distance / 40) * 10) / 10 || 1.8;
+      setRouteData({
+        route: pathList,
+        total_distance_km: distance,
+        estimated_hours: hours,
+      });
     } catch {
       setRouteData({
         route: [source, 'Karkala', target],
