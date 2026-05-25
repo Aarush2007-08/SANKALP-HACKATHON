@@ -6,14 +6,13 @@ This document is a high-fidelity design prompt, layout specification, and API bi
 
 ## 🎨 Design Language & Aesthetics
 
-*   **Atmosphere**: Premium, authentic, warm, and highly trustworthy. It blends traditional Indian handicraft heritage with high-tech AI and blockchain-backed security.
-*   **Color Palette (Warm Heritage & Tech-Glass)**:
-    *   `Primary (Heritage Orange)`: HSL `24 85% 50%` (`#E05A10` to `#EA580C`) - representing terracotta, marigold, and earthen warmth.
-    *   `Secondary (Deep Indigo)`: HSL `226 70% 20%` (`#1E1B4B` to `#312E81`) - representing trust, secure ledger, and depth.
-    *   `Success (Emerald)`: HSL `142 70% 30%` (`#065F46`) - representing verified fair trade, clean logistics, and active sync.
-    *   `Background`: Neutral dark-mode-ready (`#030712`) or warm cream-parchment (`#FAF8F5`) with glassmorphism cards (`backdrop-blur-md bg-white/10` or `bg-white/80 border border-neutral-200/50`).
-*   **Typography**: Inter (UI precision) and Playfair Display (Heritage titles) via Google Fonts.
-*   **Animations**: Smooth micro-interactions, spring-loaded buttons, and scanning laser line animations for AI image detection / QR passport scanning.
+*   **Atmosphere**: Minimalistic, warm, clean, and highly accessible. Designed specifically for rural users to easily understand and learn without overwhelming visual clutter.
+*   **Color Palette (Clean & Accessible)**:
+    *   `Background`: Pure white (`#FFFFFF`) or very soft warm off-white (`#FCFBF9`) to ensure maximum readability and a neat, clean slate.
+    *   `Primary (Heritage Orange)`: HSL `24 85% 50%` (`#E05A10`) - used sparingly for primary call-to-actions and important highlights.
+    *   `Secondary (Deep Indigo)`: HSL `226 70% 20%` (`#1E1B4B`) - used for high-contrast, easily readable text.
+*   **Typography**: Inter or Roboto (large, legible fonts with high contrast).
+*   **Focus / Spotlight Onboarding Feature (Interactive Tutorial)**: Implement a "Focus Mode" tutorial system for basic app features. When introducing a feature to the user, a dark translucent overlay should blur the entire background (`backdrop-blur-sm bg-black/40`), leaving a single, bright cutout highlighting the exact button or element they need to click to guide their attention.
 
 ---
 
@@ -127,4 +126,4 @@ Stitch should generate a **Single Page Application Dashboard** with a responsive
 
 Use this system prompt when configuring your Google Stitch UI builder workspace:
 
-> "Build a premium, high-impact responsive single-page dashboard application for the 'Sankalp Artisan Market' using React and Tailwind CSS. The design system should utilize warm Indian terracotta/earth oranges, deep indigo blues, and clean glassmorphic components to bridge traditional handicraft heritage with cutting-edge AI and blockchain trust. Organize the app into a sleek sidebar layout with five tabs: 1) Rural Intelligence Overview, 2) Regional AI Voice & Storefront (with mic recording and scan laser visual effects), 3) AI Fair Pricing & Demand Forecaster (featuring beautiful sliders, comparison charts, and festival calendars), 4) P2P Logistics Router (displaying interactive route details and cluster controls), and 5) SHECAN Trust Ledger & QR Explorer (featuring a matrix-style SHA-256 block visualizer, custom scan timelines, and spam detection warnings). Ensure all UI widgets, sliders, forms, maps, and timeline steps connect logically to the defined REST API structure running on port 8000."
+> "Build a minimalistic, ultra-clean, and warm welcoming responsive single-page dashboard application for the 'Sankalp Artisan Market' using React and Tailwind CSS. The design must be extremely accessible and easy to learn for rural users, using a bright white background, large readable typography, and avoiding visual clutter. Incorporate a 'Spotlight Onboarding Tutorial' feature: when teaching the user a basic app feature, blur and darken the background while keeping a single focused button or element highlighted to guide their click. Organize the app into a sleek sidebar layout with five tabs: 1) Rural Intelligence Overview, 2) Regional AI Voice & Storefront, 3) AI Fair Pricing & Demand Forecaster, 4) P2P Logistics Router, and 5) SHECAN Trust Ledger & QR Explorer. Ensure all UI widgets connect logically to the defined REST API structure running on port 8000."
