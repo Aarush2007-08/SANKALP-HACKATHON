@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-secondary antialiased;
+    font-family: 'Inter', 'Roboto', sans-serif;
+  }
+}
+
+/* Spotlight Overlay styles */
+.spotlight-active {
+  z-index: 100 !important;
+  position: relative !important;
+  background-color: white !important;
+  box-shadow: 0 0 0 4px #E05A10 !important;
+  border-radius: 8px !important;
+  pointer-events: auto !important;
+}
