@@ -1,0 +1,2517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bddbf0da37bb77c6bbf844de49ee90c5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_bddbf0da37bb77c6bbf844de49ee90c5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bddbf0da37bb77c6bbf844de49ee90c5 = L.map(
+                "map_bddbf0da37bb77c6bbf844de49ee90c5",
+                {
+                    center: [13.0, 75.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1549e2638f3beb9f9bf97b9b4d9a88fe = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1549e2638f3beb9f9bf97b9b4d9a88fe.addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+            var marker_3eef8f92d2bd47c70d199f7210b99003 = L.marker(
+                [13.3409, 74.7421],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_943aee6633101369284bb2c8026e5dcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4024e85f68b21b2d813ef4af41ad6aec = $(`<div id="html_4024e85f68b21b2d813ef4af41ad6aec" style="width: 100.0%; height: 100.0%;">         Artisan: Asha<br>         Village: Udupi<br>         Orders: 5         </div>`)[0];
+                popup_943aee6633101369284bb2c8026e5dcb.setContent(html_4024e85f68b21b2d813ef4af41ad6aec);
+            
+        
+
+        marker_3eef8f92d2bd47c70d199f7210b99003.bindPopup(popup_943aee6633101369284bb2c8026e5dcb)
+        ;
+
+        
+    
+    
+            var marker_6967b753572aef81581c8f12abe9a6b5 = L.marker(
+                [12.8925, 75.0349],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ee0b99c7333c900000aa2139eb29ccf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a4e975c8ee8344e475c86a3fc2ac487 = $(`<div id="html_6a4e975c8ee8344e475c86a3fc2ac487" style="width: 100.0%; height: 100.0%;">         Artisan: Meena<br>         Village: Bantwal<br>         Orders: 3         </div>`)[0];
+                popup_ee0b99c7333c900000aa2139eb29ccf8.setContent(html_6a4e975c8ee8344e475c86a3fc2ac487);
+            
+        
+
+        marker_6967b753572aef81581c8f12abe9a6b5.bindPopup(popup_ee0b99c7333c900000aa2139eb29ccf8)
+        ;
+
+        
+    
+    
+            var marker_8aacd606888b0f7f2f738301fb155306 = L.marker(
+                [12.9141, 74.856],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2defbd0bfc0bae092f3dfa8ac1aa9fa6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12eea1046b426d2325c0933746540113 = $(`<div id="html_12eea1046b426d2325c0933746540113" style="width: 100.0%; height: 100.0%;">         Artisan: Kavya<br>         Village: Mangalore<br>         Orders: 7         </div>`)[0];
+                popup_2defbd0bfc0bae092f3dfa8ac1aa9fa6.setContent(html_12eea1046b426d2325c0933746540113);
+            
+        
+
+        marker_8aacd606888b0f7f2f738301fb155306.bindPopup(popup_2defbd0bfc0bae092f3dfa8ac1aa9fa6)
+        ;
+
+        
+    
+    
+            var marker_588e5ac78b765434c129e0d69bc3c835 = L.marker(
+                [12.7593, 75.201],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_e2ba9211183193778dacbbd63c6db6de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44828d72f1f9fdad85a10a108ec9287b = $(`<div id="html_44828d72f1f9fdad85a10a108ec9287b" style="width: 100.0%; height: 100.0%;">         Artisan: Divya<br>         Village: Puttur<br>         Orders: 2         </div>`)[0];
+                popup_e2ba9211183193778dacbbd63c6db6de.setContent(html_44828d72f1f9fdad85a10a108ec9287b);
+            
+        
+
+        marker_588e5ac78b765434c129e0d69bc3c835.bindPopup(popup_e2ba9211183193778dacbbd63c6db6de)
+        ;
+
+        
+    
+    
+            var marker_adc5a8cfc7dfddcf099aef94b8e67379 = L.marker(
+                [13.0056, 75.326],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_025c1584be0880f5756baa93108e55b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_309600f6e91e1541162c2ba8012e5ed4 = $(`<div id="html_309600f6e91e1541162c2ba8012e5ed4" style="width: 100.0%; height: 100.0%;">         Artisan: Lakshmi<br>         Village: Ujire<br>         Orders: 6         </div>`)[0];
+                popup_025c1584be0880f5756baa93108e55b5.setContent(html_309600f6e91e1541162c2ba8012e5ed4);
+            
+        
+
+        marker_adc5a8cfc7dfddcf099aef94b8e67379.bindPopup(popup_025c1584be0880f5756baa93108e55b5)
+        ;
+
+        
+    
+    
+            var marker_56dd820e67f6a768772e4951a1c2b89e = L.marker(
+                [13.214, 74.9923],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_8071e5d3b3f6789baacee80cc821cb0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3db1450f9e5bc42318f84d5dea09cc5 = $(`<div id="html_f3db1450f9e5bc42318f84d5dea09cc5" style="width: 100.0%; height: 100.0%;">         Artisan: Anitha<br>         Village: Karkala<br>         Orders: 4         </div>`)[0];
+                popup_8071e5d3b3f6789baacee80cc821cb0b.setContent(html_f3db1450f9e5bc42318f84d5dea09cc5);
+            
+        
+
+        marker_56dd820e67f6a768772e4951a1c2b89e.bindPopup(popup_8071e5d3b3f6789baacee80cc821cb0b)
+        ;
+
+        
+    
+    
+            var marker_879bd755e2d3911452aec5a20ae99cc4 = L.marker(
+                [13.6316, 74.69],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_aa465872d51369e71476598374fed257 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3af7104982c602538cac18f20f8b752f = $(`<div id="html_3af7104982c602538cac18f20f8b752f" style="width: 100.0%; height: 100.0%;">         Artisan: Pooja<br>         Village: Kundapura<br>         Orders: 5         </div>`)[0];
+                popup_aa465872d51369e71476598374fed257.setContent(html_3af7104982c602538cac18f20f8b752f);
+            
+        
+
+        marker_879bd755e2d3911452aec5a20ae99cc4.bindPopup(popup_aa465872d51369e71476598374fed257)
+        ;
+
+        
+    
+    
+            var marker_8ec579fdbabaa9c3b0c6430b0238bdb5 = L.marker(
+                [12.9807, 74.8075],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_646704429882bec7566f0819de9667e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cc8c46472c69eb8444b2d7d1ae12ba2 = $(`<div id="html_8cc8c46472c69eb8444b2d7d1ae12ba2" style="width: 100.0%; height: 100.0%;">         Artisan: Sneha<br>         Village: Surathkal<br>         Orders: 8         </div>`)[0];
+                popup_646704429882bec7566f0819de9667e1.setContent(html_8cc8c46472c69eb8444b2d7d1ae12ba2);
+            
+        
+
+        marker_8ec579fdbabaa9c3b0c6430b0238bdb5.bindPopup(popup_646704429882bec7566f0819de9667e1)
+        ;
+
+        
+    
+    
+            var marker_758214052dee65e51dcd53b5a3540474 = L.marker(
+                [13.0667, 74.9952],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_e12da7003ae8d7fe3f8f3abfd7369a9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1bc5694ba96ced8d87cf751c3a951fd3 = $(`<div id="html_1bc5694ba96ced8d87cf751c3a951fd3" style="width: 100.0%; height: 100.0%;">         Artisan: Bhavya<br>         Village: Moodbidri<br>         Orders: 3         </div>`)[0];
+                popup_e12da7003ae8d7fe3f8f3abfd7369a9b.setContent(html_1bc5694ba96ced8d87cf751c3a951fd3);
+            
+        
+
+        marker_758214052dee65e51dcd53b5a3540474.bindPopup(popup_e12da7003ae8d7fe3f8f3abfd7369a9b)
+        ;
+
+        
+    
+    
+            var marker_18aca7dbcada0359eca49185750defff = L.marker(
+                [12.9833, 75.3],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ebfe89fa80a9a8d018c44de2d9987b8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52eb52288cc4a86ee3ab878d03cd854a = $(`<div id="html_52eb52288cc4a86ee3ab878d03cd854a" style="width: 100.0%; height: 100.0%;">         Artisan: Nandini<br>         Village: Belthangady<br>         Orders: 6         </div>`)[0];
+                popup_ebfe89fa80a9a8d018c44de2d9987b8a.setContent(html_52eb52288cc4a86ee3ab878d03cd854a);
+            
+        
+
+        marker_18aca7dbcada0359eca49185750defff.bindPopup(popup_ebfe89fa80a9a8d018c44de2d9987b8a)
+        ;
+
+        
+    
+    
+            var marker_6bc3da92a02475af041aae1fd419a28d = L.marker(
+                [12.561, 75.3872],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_cc05d751ee8a26f3819c02cb739cd8db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0640815029b7e464a7975ef69af3ca69 = $(`<div id="html_0640815029b7e464a7975ef69af3ca69" style="width: 100.0%; height: 100.0%;">         Artisan: Rashmi<br>         Village: Sullia<br>         Orders: 5         </div>`)[0];
+                popup_cc05d751ee8a26f3819c02cb739cd8db.setContent(html_0640815029b7e464a7975ef69af3ca69);
+            
+        
+
+        marker_6bc3da92a02475af041aae1fd419a28d.bindPopup(popup_cc05d751ee8a26f3819c02cb739cd8db)
+        ;
+
+        
+    
+    
+            var marker_f2494e42ea35db82779e126081a3b79a = L.marker(
+                [12.4996, 74.9869],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_e0e637e6432c513735aa31063d6f535a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22e4ad73dadca68ba13e75b4b2bf0c41 = $(`<div id="html_22e4ad73dadca68ba13e75b4b2bf0c41" style="width: 100.0%; height: 100.0%;">         Artisan: Deepa<br>         Village: Kasaragod<br>         Orders: 4         </div>`)[0];
+                popup_e0e637e6432c513735aa31063d6f535a.setContent(html_22e4ad73dadca68ba13e75b4b2bf0c41);
+            
+        
+
+        marker_f2494e42ea35db82779e126081a3b79a.bindPopup(popup_e0e637e6432c513735aa31063d6f535a)
+        ;
+
+        
+    
+    
+            var marker_d21a098e43f80e05a6fe0f4cd0092432 = L.marker(
+                [13.352, 74.7928],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_3395cdf727981ee01b705a44edbabae1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e6cac3e2d6ef114c0576792e710ab1c = $(`<div id="html_0e6cac3e2d6ef114c0576792e710ab1c" style="width: 100.0%; height: 100.0%;">         Artisan: Aarti<br>         Village: Manipal<br>         Orders: 7         </div>`)[0];
+                popup_3395cdf727981ee01b705a44edbabae1.setContent(html_0e6cac3e2d6ef114c0576792e710ab1c);
+            
+        
+
+        marker_d21a098e43f80e05a6fe0f4cd0092432.bindPopup(popup_3395cdf727981ee01b705a44edbabae1)
+        ;
+
+        
+    
+    
+            var marker_efd3b7ca7024b4a162ed0df37a6eef26 = L.marker(
+                [13.2257, 74.7345],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_536ccd5cddabf380011794e8701b1c21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f855d726aa691959c8967a9ebbbedcb9 = $(`<div id="html_f855d726aa691959c8967a9ebbbedcb9" style="width: 100.0%; height: 100.0%;">         Artisan: Shreya<br>         Village: Kapu<br>         Orders: 2         </div>`)[0];
+                popup_536ccd5cddabf380011794e8701b1c21.setContent(html_f855d726aa691959c8967a9ebbbedcb9);
+            
+        
+
+        marker_efd3b7ca7024b4a162ed0df37a6eef26.bindPopup(popup_536ccd5cddabf380011794e8701b1c21)
+        ;
+
+        
+    
+    
+            var marker_1762e66e8d240c2a43a496488d8dbabe = L.marker(
+                [13.4249, 74.746],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ae6b395465589f859b82eb448c91d052 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0411a6c1bf310c3d86cdd1f5cd8876f7 = $(`<div id="html_0411a6c1bf310c3d86cdd1f5cd8876f7" style="width: 100.0%; height: 100.0%;">         Artisan: Harini<br>         Village: Brahmavara<br>         Orders: 3         </div>`)[0];
+                popup_ae6b395465589f859b82eb448c91d052.setContent(html_0411a6c1bf310c3d86cdd1f5cd8876f7);
+            
+        
+
+        marker_1762e66e8d240c2a43a496488d8dbabe.bindPopup(popup_ae6b395465589f859b82eb448c91d052)
+        ;
+
+        
+    
+    
+            var marker_f5c111699e069913cca9aa35da998d5c = L.marker(
+                [13.2488, 74.9921],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_6f4bdb03708d1436fedf492caad3c921 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8270691c56f3a938f85c6851df0d103e = $(`<div id="html_8270691c56f3a938f85c6851df0d103e" style="width: 100.0%; height: 100.0%;">         Artisan: Keerthana<br>         Village: Hebri<br>         Orders: 5         </div>`)[0];
+                popup_6f4bdb03708d1436fedf492caad3c921.setContent(html_8270691c56f3a938f85c6851df0d103e);
+            
+        
+
+        marker_f5c111699e069913cca9aa35da998d5c.bindPopup(popup_6f4bdb03708d1436fedf492caad3c921)
+        ;
+
+        
+    
+    
+            var marker_33b53b98491239765b116658d54e8ce9 = L.marker(
+                [13.8667, 74.6333],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_9f80a7475a25f394304e0ff783dd266b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e024240881e2922c6908f202c70edc7e = $(`<div id="html_e024240881e2922c6908f202c70edc7e" style="width: 100.0%; height: 100.0%;">         Artisan: Vaishnavi<br>         Village: Baindur<br>         Orders: 4         </div>`)[0];
+                popup_9f80a7475a25f394304e0ff783dd266b.setContent(html_e024240881e2922c6908f202c70edc7e);
+            
+        
+
+        marker_33b53b98491239765b116658d54e8ce9.bindPopup(popup_9f80a7475a25f394304e0ff783dd266b)
+        ;
+
+        
+    
+    
+            var marker_ea083e18dac2e68ff2c421e23776ffdd = L.marker(
+                [12.7667, 75.1167],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_81a2698db3c977daa76dbf717d234237 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68c02fdfbcc5a7896d7216e293090f62 = $(`<div id="html_68c02fdfbcc5a7896d7216e293090f62" style="width: 100.0%; height: 100.0%;">         Artisan: Chaitra<br>         Village: Vitla<br>         Orders: 6         </div>`)[0];
+                popup_81a2698db3c977daa76dbf717d234237.setContent(html_68c02fdfbcc5a7896d7216e293090f62);
+            
+        
+
+        marker_ea083e18dac2e68ff2c421e23776ffdd.bindPopup(popup_81a2698db3c977daa76dbf717d234237)
+        ;
+
+        
+    
+    
+            var marker_13c23deef91dc3884ba576c3f5d77fd8 = L.marker(
+                [12.9838, 75.1714],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_4805905b18f0673784403f50ac0aadaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f203e289c8ae923db139edd8e1fea51f = $(`<div id="html_f203e289c8ae923db139edd8e1fea51f" style="width: 100.0%; height: 100.0%;">         Artisan: Pavithra<br>         Village: Venur<br>         Orders: 3         </div>`)[0];
+                popup_4805905b18f0673784403f50ac0aadaa.setContent(html_f203e289c8ae923db139edd8e1fea51f);
+            
+        
+
+        marker_13c23deef91dc3884ba576c3f5d77fd8.bindPopup(popup_4805905b18f0673784403f50ac0aadaa)
+        ;
+
+        
+    
+    
+            var marker_415cdee68881615a194d976e2bc948df = L.marker(
+                [12.95, 75.3833],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_f97ee3ca8e5bb68277da72a699e8cb2a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67e2bc07397407d09b056c37db40f24e = $(`<div id="html_67e2bc07397407d09b056c37db40f24e" style="width: 100.0%; height: 100.0%;">         Artisan: Akshaya<br>         Village: Dharmasthala<br>         Orders: 5         </div>`)[0];
+                popup_f97ee3ca8e5bb68277da72a699e8cb2a.setContent(html_67e2bc07397407d09b056c37db40f24e);
+            
+        
+
+        marker_415cdee68881615a194d976e2bc948df.bindPopup(popup_f97ee3ca8e5bb68277da72a699e8cb2a)
+        ;
+
+        
+    
+    
+            var marker_6959b32e18d3f08de3616d6fea42a0cd = L.marker(
+                [13.866, 74.62],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_50800664ba833cc2d8a9b173c42debf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fd716de312ca8ecd63a403cce63f980 = $(`<div id="html_9fd716de312ca8ecd63a403cce63f980" style="width: 100.0%; height: 100.0%;">         Artisan: Neha<br>         Village: Byndoor<br>         Orders: 4         </div>`)[0];
+                popup_50800664ba833cc2d8a9b173c42debf9.setContent(html_9fd716de312ca8ecd63a403cce63f980);
+            
+        
+
+        marker_6959b32e18d3f08de3616d6fea42a0cd.bindPopup(popup_50800664ba833cc2d8a9b173c42debf9)
+        ;
+
+        
+    
+    
+            var marker_699fce8c9618e2fdc1b9d1b80e091d12 = L.marker(
+                [13.8615, 74.809],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_51bf1a7018c3007293291133398fd285 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_378492eebfec1033c576f75b405fc93c = $(`<div id="html_378492eebfec1033c576f75b405fc93c" style="width: 100.0%; height: 100.0%;">         Artisan: Sanjana<br>         Village: Kollur<br>         Orders: 7         </div>`)[0];
+                popup_51bf1a7018c3007293291133398fd285.setContent(html_378492eebfec1033c576f75b405fc93c);
+            
+        
+
+        marker_699fce8c9618e2fdc1b9d1b80e091d12.bindPopup(popup_51bf1a7018c3007293291133398fd285)
+        ;
+
+        
+    
+    
+            var marker_3797493e905459e268285cdd85b7f958 = L.marker(
+                [13.2194, 74.8786],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_4cebcdc7faea9fbba5017a39bd78c6c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7ecd0053ca28184620446312b9754dc = $(`<div id="html_d7ecd0053ca28184620446312b9754dc" style="width: 100.0%; height: 100.0%;">         Artisan: Madhuri<br>         Village: Shirva<br>         Orders: 2         </div>`)[0];
+                popup_4cebcdc7faea9fbba5017a39bd78c6c2.setContent(html_d7ecd0053ca28184620446312b9754dc);
+            
+        
+
+        marker_3797493e905459e268285cdd85b7f958.bindPopup(popup_4cebcdc7faea9fbba5017a39bd78c6c2)
+        ;
+
+        
+    
+    
+            var marker_0b7831c02312c5f16ad641b9bcde2897 = L.marker(
+                [13.1345, 74.7822],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_260ec9c92b6491b7b2367ac144157c33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c20cd6a0e409262d00732d08ff438227 = $(`<div id="html_c20cd6a0e409262d00732d08ff438227" style="width: 100.0%; height: 100.0%;">         Artisan: Prerana<br>         Village: Padubidri<br>         Orders: 5         </div>`)[0];
+                popup_260ec9c92b6491b7b2367ac144157c33.setContent(html_c20cd6a0e409262d00732d08ff438227);
+            
+        
+
+        marker_0b7831c02312c5f16ad641b9bcde2897.bindPopup(popup_260ec9c92b6491b7b2367ac144157c33)
+        ;
+
+        
+    
+    
+            var marker_8b303c7bbcbed40074c44f8473839bc1 = L.marker(
+                [13.0467, 74.8012],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c5f76320b999ef5e256fd66ce4e6de23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14997307a14fba167e6c7097d55d8816 = $(`<div id="html_14997307a14fba167e6c7097d55d8816" style="width: 100.0%; height: 100.0%;">         Artisan: Anu<br>         Village: Kinnigoli<br>         Orders: 6         </div>`)[0];
+                popup_c5f76320b999ef5e256fd66ce4e6de23.setContent(html_14997307a14fba167e6c7097d55d8816);
+            
+        
+
+        marker_8b303c7bbcbed40074c44f8473839bc1.bindPopup(popup_c5f76320b999ef5e256fd66ce4e6de23)
+        ;
+
+        
+    
+    
+            var marker_d5910b58777f615a0a8caf1d15834fa7 = L.marker(
+                [12.9505, 74.8123],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c33a4bb7b83074dc309d738d8db9788b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3ec43d43074103253c311fe8b45a93c = $(`<div id="html_a3ec43d43074103253c311fe8b45a93c" style="width: 100.0%; height: 100.0%;">         Artisan: Nisha<br>         Village: Panambur<br>         Orders: 4         </div>`)[0];
+                popup_c33a4bb7b83074dc309d738d8db9788b.setContent(html_a3ec43d43074103253c311fe8b45a93c);
+            
+        
+
+        marker_d5910b58777f615a0a8caf1d15834fa7.bindPopup(popup_c33a4bb7b83074dc309d738d8db9788b)
+        ;
+
+        
+    
+    
+            var marker_a6ab06d0d0a13c9497c895f82397a567 = L.marker(
+                [13.091, 74.7933],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2dbe996766af19e585fffd68a5b18561 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_911b51dea01ba7d0066cc1b1975ce0cb = $(`<div id="html_911b51dea01ba7d0066cc1b1975ce0cb" style="width: 100.0%; height: 100.0%;">         Artisan: Swathi<br>         Village: Mulki<br>         Orders: 5         </div>`)[0];
+                popup_2dbe996766af19e585fffd68a5b18561.setContent(html_911b51dea01ba7d0066cc1b1975ce0cb);
+            
+        
+
+        marker_a6ab06d0d0a13c9497c895f82397a567.bindPopup(popup_2dbe996766af19e585fffd68a5b18561)
+        ;
+
+        
+    
+    
+            var marker_c4845a9efe06e0f790c5a93ce8d83a89 = L.marker(
+                [13.3, 74.75],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_8dde1fa5b50d9a93669f72606bec183d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3772500a667fcde981343bddd585acf1 = $(`<div id="html_3772500a667fcde981343bddd585acf1" style="width: 100.0%; height: 100.0%;">         Artisan: Anjali<br>         Village: Katapady<br>         Orders: 3         </div>`)[0];
+                popup_8dde1fa5b50d9a93669f72606bec183d.setContent(html_3772500a667fcde981343bddd585acf1);
+            
+        
+
+        marker_c4845a9efe06e0f790c5a93ce8d83a89.bindPopup(popup_8dde1fa5b50d9a93669f72606bec183d)
+        ;
+
+        
+    
+    
+            var marker_eb96fef69cf246456e4643ca283a6387 = L.marker(
+                [13.25, 74.7],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2cdd9a961da5b1cc3ef102b8798fa8d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80aa898128f8f16bfd094708d1a7863f = $(`<div id="html_80aa898128f8f16bfd094708d1a7863f" style="width: 100.0%; height: 100.0%;">         Artisan: Pallavi<br>         Village: Saligrama<br>         Orders: 4         </div>`)[0];
+                popup_2cdd9a961da5b1cc3ef102b8798fa8d0.setContent(html_80aa898128f8f16bfd094708d1a7863f);
+            
+        
+
+        marker_eb96fef69cf246456e4643ca283a6387.bindPopup(popup_2cdd9a961da5b1cc3ef102b8798fa8d0)
+        ;
+
+        
+    
+    
+            var marker_bf295dcfc959c6cf3b577ad8a0245085 = L.marker(
+                [13.3667, 74.7],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_66f84ade14f57067d51ad770dcd1d641 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fac220312320b6ba4bca38e047f2b83 = $(`<div id="html_1fac220312320b6ba4bca38e047f2b83" style="width: 100.0%; height: 100.0%;">         Artisan: Ritika<br>         Village: Kemmannu<br>         Orders: 5         </div>`)[0];
+                popup_66f84ade14f57067d51ad770dcd1d641.setContent(html_1fac220312320b6ba4bca38e047f2b83);
+            
+        
+
+        marker_bf295dcfc959c6cf3b577ad8a0245085.bindPopup(popup_66f84ade14f57067d51ad770dcd1d641)
+        ;
+
+        
+    
+    
+            var marker_e888d36da1527fa64f313bf5e641dcc2 = L.marker(
+                [12.8056, 74.8606],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_7491741445e19864e87f53bad04dafec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01f9fa7e6ff01a125cf84f516eda8468 = $(`<div id="html_01f9fa7e6ff01a125cf84f516eda8468" style="width: 100.0%; height: 100.0%;">         Artisan: Tejaswini<br>         Village: Ullal<br>         Orders: 6         </div>`)[0];
+                popup_7491741445e19864e87f53bad04dafec.setContent(html_01f9fa7e6ff01a125cf84f516eda8468);
+            
+        
+
+        marker_e888d36da1527fa64f313bf5e641dcc2.bindPopup(popup_7491741445e19864e87f53bad04dafec)
+        ;
+
+        
+    
+    
+            var marker_39c9f12c65c07d3a1f0fc29637a5199d = L.marker(
+                [12.89, 75.03],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_d0b159108e69c5278a59e78acf9088af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d94ff92fdc97f9070eabf22246c886fb = $(`<div id="html_d94ff92fdc97f9070eabf22246c886fb" style="width: 100.0%; height: 100.0%;">         Artisan: Monisha<br>         Village: BC Road<br>         Orders: 7         </div>`)[0];
+                popup_d0b159108e69c5278a59e78acf9088af.setContent(html_d94ff92fdc97f9070eabf22246c886fb);
+            
+        
+
+        marker_39c9f12c65c07d3a1f0fc29637a5199d.bindPopup(popup_d0b159108e69c5278a59e78acf9088af)
+        ;
+
+        
+    
+    
+            var marker_f54c497d56c9b15a2585bc36abe7ae2f = L.marker(
+                [12.9, 74.98],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_1eee5d8cc904bbfa9aab9b4c54e158d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53a19925fd24de5680de45ba01f3ed66 = $(`<div id="html_53a19925fd24de5680de45ba01f3ed66" style="width: 100.0%; height: 100.0%;">         Artisan: Aishwarya<br>         Village: Farangipete<br>         Orders: 3         </div>`)[0];
+                popup_1eee5d8cc904bbfa9aab9b4c54e158d0.setContent(html_53a19925fd24de5680de45ba01f3ed66);
+            
+        
+
+        marker_f54c497d56c9b15a2585bc36abe7ae2f.bindPopup(popup_1eee5d8cc904bbfa9aab9b4c54e158d0)
+        ;
+
+        
+    
+    
+            var marker_46d4e9a0fdda39dbaf1b80c16ab5c6a1 = L.marker(
+                [12.983, 75.28],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_273470f0ba8bbb6eed71d22cc7d7d976 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f5609b98b9f5cd8b86990fbefc53cd5 = $(`<div id="html_5f5609b98b9f5cd8b86990fbefc53cd5" style="width: 100.0%; height: 100.0%;">         Artisan: Krithika<br>         Village: Madanthyar<br>         Orders: 5         </div>`)[0];
+                popup_273470f0ba8bbb6eed71d22cc7d7d976.setContent(html_5f5609b98b9f5cd8b86990fbefc53cd5);
+            
+        
+
+        marker_46d4e9a0fdda39dbaf1b80c16ab5c6a1.bindPopup(popup_273470f0ba8bbb6eed71d22cc7d7d976)
+        ;
+
+        
+    
+    
+            var marker_b5a6a376660142bce918c01abd79c19b = L.marker(
+                [13.25, 74.85],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c9d98f9d6d149d9244cc7ffda334e188 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfc59456883bb21b18a76675bd0e3b75 = $(`<div id="html_dfc59456883bb21b18a76675bd0e3b75" style="width: 100.0%; height: 100.0%;">         Artisan: Ishita<br>         Village: Perdoor<br>         Orders: 4         </div>`)[0];
+                popup_c9d98f9d6d149d9244cc7ffda334e188.setContent(html_dfc59456883bb21b18a76675bd0e3b75);
+            
+        
+
+        marker_b5a6a376660142bce918c01abd79c19b.bindPopup(popup_c9d98f9d6d149d9244cc7ffda334e188)
+        ;
+
+        
+    
+    
+            var marker_3109711eaecc4da66999a7e5c49363bd = L.marker(
+                [13.55, 74.7],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_df5ffaf60f22daee1cc2d181691c3a49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3b5ebbf4e253d98a7a68702d852553c = $(`<div id="html_f3b5ebbf4e253d98a7a68702d852553c" style="width: 100.0%; height: 100.0%;">         Artisan: Ramya<br>         Village: Yedthare<br>         Orders: 6         </div>`)[0];
+                popup_df5ffaf60f22daee1cc2d181691c3a49.setContent(html_f3b5ebbf4e253d98a7a68702d852553c);
+            
+        
+
+        marker_3109711eaecc4da66999a7e5c49363bd.bindPopup(popup_df5ffaf60f22daee1cc2d181691c3a49)
+        ;
+
+        
+    
+    
+            var marker_e1e995412b7a749aa546d840a820e859 = L.marker(
+                [13.65, 74.67],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_df49d5c1ae6cb2f85c9d823d23efe87e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b93e8dd99c3a6a7b7d3d4ac5f7a7612 = $(`<div id="html_7b93e8dd99c3a6a7b7d3d4ac5f7a7612" style="width: 100.0%; height: 100.0%;">         Artisan: Soumya<br>         Village: Gangolli<br>         Orders: 5         </div>`)[0];
+                popup_df49d5c1ae6cb2f85c9d823d23efe87e.setContent(html_7b93e8dd99c3a6a7b7d3d4ac5f7a7612);
+            
+        
+
+        marker_e1e995412b7a749aa546d840a820e859.bindPopup(popup_df49d5c1ae6cb2f85c9d823d23efe87e)
+        ;
+
+        
+    
+    
+            var marker_f263e806a5619e354d6e993056d12070 = L.marker(
+                [13.7, 74.65],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c5f9db529a1d2e100d71cf9ec65a2727 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec9f1776e973ee50315cdf6a42a2e9c7 = $(`<div id="html_ec9f1776e973ee50315cdf6a42a2e9c7" style="width: 100.0%; height: 100.0%;">         Artisan: Sahana<br>         Village: Maravanthe<br>         Orders: 3         </div>`)[0];
+                popup_c5f9db529a1d2e100d71cf9ec65a2727.setContent(html_ec9f1776e973ee50315cdf6a42a2e9c7);
+            
+        
+
+        marker_f263e806a5619e354d6e993056d12070.bindPopup(popup_c5f9db529a1d2e100d71cf9ec65a2727)
+        ;
+
+        
+    
+    
+            var marker_57d87cca9761fa64de5678a2ec5a0292 = L.marker(
+                [13.45, 74.73],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_049b187b894c2263ec36c60cbe414a0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9efa300cb21d9ae2be8ce7e430f0f27c = $(`<div id="html_9efa300cb21d9ae2be8ce7e430f0f27c" style="width: 100.0%; height: 100.0%;">         Artisan: Nivetha<br>         Village: Halady<br>         Orders: 4         </div>`)[0];
+                popup_049b187b894c2263ec36c60cbe414a0d.setContent(html_9efa300cb21d9ae2be8ce7e430f0f27c);
+            
+        
+
+        marker_57d87cca9761fa64de5678a2ec5a0292.bindPopup(popup_049b187b894c2263ec36c60cbe414a0d)
+        ;
+
+        
+    
+    
+            var marker_d0ee1e556d0cf8ebaa4a23b08dba2592 = L.marker(
+                [12.8167, 74.85],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2c26fb9ce05248fd73b72c33b553cd74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7f20a9b5c88f1baf78006b0ea082b46 = $(`<div id="html_e7f20a9b5c88f1baf78006b0ea082b46" style="width: 100.0%; height: 100.0%;">         Artisan: Reshma<br>         Village: Thokkottu<br>         Orders: 6         </div>`)[0];
+                popup_2c26fb9ce05248fd73b72c33b553cd74.setContent(html_e7f20a9b5c88f1baf78006b0ea082b46);
+            
+        
+
+        marker_d0ee1e556d0cf8ebaa4a23b08dba2592.bindPopup(popup_2c26fb9ce05248fd73b72c33b553cd74)
+        ;
+
+        
+    
+    
+            var marker_339a89a99de796b968c762e210c0237b = L.marker(
+                [12.75, 75.0667],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_45331276320e312a306ffe480579dde7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd1094972eff6decc85a042c4c5385b6 = $(`<div id="html_cd1094972eff6decc85a042c4c5385b6" style="width: 100.0%; height: 100.0%;">         Artisan: Arpitha<br>         Village: Uppinangady<br>         Orders: 4         </div>`)[0];
+                popup_45331276320e312a306ffe480579dde7.setContent(html_cd1094972eff6decc85a042c4c5385b6);
+            
+        
+
+        marker_339a89a99de796b968c762e210c0237b.bindPopup(popup_45331276320e312a306ffe480579dde7)
+        ;
+
+        
+    
+    
+            var marker_b3fb67bd1412efd58774295e259f932f = L.marker(
+                [12.9417, 75.7842],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_9c2ca939c51ed9c6565eddce1fd6a3de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_215d2b7615c5fb255db1a0b620539cfb = $(`<div id="html_215d2b7615c5fb255db1a0b620539cfb" style="width: 100.0%; height: 100.0%;">         Artisan: Tanvi<br>         Village: Sakleshpur<br>         Orders: 5         </div>`)[0];
+                popup_9c2ca939c51ed9c6565eddce1fd6a3de.setContent(html_215d2b7615c5fb255db1a0b620539cfb);
+            
+        
+
+        marker_b3fb67bd1412efd58774295e259f932f.bindPopup(popup_9c2ca939c51ed9c6565eddce1fd6a3de)
+        ;
+
+        
+    
+    
+            var marker_bc0b466d295f4fbd7c62d29c1bd14b36 = L.marker(
+                [12.6667, 75.6],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_83d8abf8178a710c80f73a14c094812e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5dee493a062b83943de8640644db52fa = $(`<div id="html_5dee493a062b83943de8640644db52fa" style="width: 100.0%; height: 100.0%;">         Artisan: Padmini<br>         Village: Subrahmanya<br>         Orders: 3         </div>`)[0];
+                popup_83d8abf8178a710c80f73a14c094812e.setContent(html_5dee493a062b83943de8640644db52fa);
+            
+        
+
+        marker_bc0b466d295f4fbd7c62d29c1bd14b36.bindPopup(popup_83d8abf8178a710c80f73a14c094812e)
+        ;
+
+        
+    
+    
+            var marker_e8c143a3e159e40dd9b9896c57172cd0 = L.marker(
+                [12.983, 75.3005],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_0537d6bf4a88b94865a771ff49dae414 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_234ace8707ee128778cc07ec60df2b7f = $(`<div id="html_234ace8707ee128778cc07ec60df2b7f" style="width: 100.0%; height: 100.0%;">         Artisan: Riya<br>         Village: Beltangady<br>         Orders: 6         </div>`)[0];
+                popup_0537d6bf4a88b94865a771ff49dae414.setContent(html_234ace8707ee128778cc07ec60df2b7f);
+            
+        
+
+        marker_e8c143a3e159e40dd9b9896c57172cd0.bindPopup(popup_0537d6bf4a88b94865a771ff49dae414)
+        ;
+
+        
+    
+    
+            var marker_e0d7b1ad8f308f1a59e94b2ff55183c8 = L.marker(
+                [12.87, 74.84],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_cf2805ad536416a0ed30da5091e6db68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e68c886b07d8f658db2c22f4dd5aa6ab = $(`<div id="html_e68c886b07d8f658db2c22f4dd5aa6ab" style="width: 100.0%; height: 100.0%;">         Artisan: Moksha<br>         Village: Attavar<br>         Orders: 5         </div>`)[0];
+                popup_cf2805ad536416a0ed30da5091e6db68.setContent(html_e68c886b07d8f658db2c22f4dd5aa6ab);
+            
+        
+
+        marker_e0d7b1ad8f308f1a59e94b2ff55183c8.bindPopup(popup_cf2805ad536416a0ed30da5091e6db68)
+        ;
+
+        
+    
+    
+            var marker_b7e76fd27b4d6bf5aedc96682d7c0424 = L.marker(
+                [12.82, 74.9],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ff3298258e705e59027561c0db70f6cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4aed27210cb8068e84b7c9d1b74a68a = $(`<div id="html_a4aed27210cb8068e84b7c9d1b74a68a" style="width: 100.0%; height: 100.0%;">         Artisan: Bhavana<br>         Village: Kotekar<br>         Orders: 4         </div>`)[0];
+                popup_ff3298258e705e59027561c0db70f6cc.setContent(html_a4aed27210cb8068e84b7c9d1b74a68a);
+            
+        
+
+        marker_b7e76fd27b4d6bf5aedc96682d7c0424.bindPopup(popup_ff3298258e705e59027561c0db70f6cc)
+        ;
+
+        
+    
+    
+            var marker_76f992d820d88334451286faf3aa3132 = L.marker(
+                [12.97, 74.8],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_dd96872a37954aaa95064b8ba30567a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_102bf5c82d7f43e7defd6dcfc86e3404 = $(`<div id="html_102bf5c82d7f43e7defd6dcfc86e3404" style="width: 100.0%; height: 100.0%;">         Artisan: Sushmitha<br>         Village: Kulai<br>         Orders: 6         </div>`)[0];
+                popup_dd96872a37954aaa95064b8ba30567a5.setContent(html_102bf5c82d7f43e7defd6dcfc86e3404);
+            
+        
+
+        marker_76f992d820d88334451286faf3aa3132.bindPopup(popup_dd96872a37954aaa95064b8ba30567a5)
+        ;
+
+        
+    
+    
+            var marker_29544cb8cb6f66bc028e2742f9cfece9 = L.marker(
+                [12.89, 74.86],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2aaee5df17455690fcc0662d56521634 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55cb970eed041b82fb916e5399b601c1 = $(`<div id="html_55cb970eed041b82fb916e5399b601c1" style="width: 100.0%; height: 100.0%;">         Artisan: Namitha<br>         Village: Padil<br>         Orders: 3         </div>`)[0];
+                popup_2aaee5df17455690fcc0662d56521634.setContent(html_55cb970eed041b82fb916e5399b601c1);
+            
+        
+
+        marker_29544cb8cb6f66bc028e2742f9cfece9.bindPopup(popup_2aaee5df17455690fcc0662d56521634)
+        ;
+
+        
+    
+    
+            var marker_95ef3ce957faf24d3aef08a79fce8631 = L.marker(
+                [12.86, 74.85],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_417250e20754f1c88d545ef468ed46f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8638ea060f4c5949dea4c523121ed378 = $(`<div id="html_8638ea060f4c5949dea4c523121ed378" style="width: 100.0%; height: 100.0%;">         Artisan: Varsha<br>         Village: Jeppu<br>         Orders: 7         </div>`)[0];
+                popup_417250e20754f1c88d545ef468ed46f1.setContent(html_8638ea060f4c5949dea4c523121ed378);
+            
+        
+
+        marker_95ef3ce957faf24d3aef08a79fce8631.bindPopup(popup_417250e20754f1c88d545ef468ed46f1)
+        ;
+
+        
+    
+    
+            var marker_7b60261614fac03e98c9473eefdb67a0 = L.marker(
+                [12.89, 74.84],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ca14d1ca165bf8cc363d8c47da269e97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d86c4a0b2cdb11ea51b5d68b3b1a6a4 = $(`<div id="html_0d86c4a0b2cdb11ea51b5d68b3b1a6a4" style="width: 100.0%; height: 100.0%;">         Artisan: Pavani<br>         Village: Ladyhill<br>         Orders: 5         </div>`)[0];
+                popup_ca14d1ca165bf8cc363d8c47da269e97.setContent(html_0d86c4a0b2cdb11ea51b5d68b3b1a6a4);
+            
+        
+
+        marker_7b60261614fac03e98c9473eefdb67a0.bindPopup(popup_ca14d1ca165bf8cc363d8c47da269e97)
+        ;
+
+        
+    
+    
+            var marker_5d8b6558600ad3ddfe1be94fef94c5e7 = L.marker(
+                [12.87, 74.845],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_15180bac8d751c2e7fbd4b4e110c1f88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ca5718956383875a977e7d3d62d4250 = $(`<div id="html_1ca5718956383875a977e7d3d62d4250" style="width: 100.0%; height: 100.0%;">         Artisan: Lekha<br>         Village: Hampankatta<br>         Orders: 4         </div>`)[0];
+                popup_15180bac8d751c2e7fbd4b4e110c1f88.setContent(html_1ca5718956383875a977e7d3d62d4250);
+            
+        
+
+        marker_5d8b6558600ad3ddfe1be94fef94c5e7.bindPopup(popup_15180bac8d751c2e7fbd4b4e110c1f88)
+        ;
+
+        
+    
+    
+            var marker_4b97857ccb54bff5a97aa38a9c51fa7c = L.marker(
+                [12.85, 74.835],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_78c7e44f852979ba165db11d85e7c1a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aea38fb23a371d951395c7061d62f946 = $(`<div id="html_aea38fb23a371d951395c7061d62f946" style="width: 100.0%; height: 100.0%;">         Artisan: Raksha<br>         Village: Bunder<br>         Orders: 5         </div>`)[0];
+                popup_78c7e44f852979ba165db11d85e7c1a8.setContent(html_aea38fb23a371d951395c7061d62f946);
+            
+        
+
+        marker_4b97857ccb54bff5a97aa38a9c51fa7c.bindPopup(popup_78c7e44f852979ba165db11d85e7c1a8)
+        ;
+
+        
+    
+    
+            var marker_a139a59f242055275541204aab89ba68 = L.marker(
+                [12.88, 74.83],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_fd889c1ced98353617c909dccb8b7dfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc891b9f542f71daad3e55e3239eee0e = $(`<div id="html_dc891b9f542f71daad3e55e3239eee0e" style="width: 100.0%; height: 100.0%;">         Artisan: Harsha<br>         Village: Mannagudda<br>         Orders: 6         </div>`)[0];
+                popup_fd889c1ced98353617c909dccb8b7dfa.setContent(html_dc891b9f542f71daad3e55e3239eee0e);
+            
+        
+
+        marker_a139a59f242055275541204aab89ba68.bindPopup(popup_fd889c1ced98353617c909dccb8b7dfa)
+        ;
+
+        
+    
+    
+            var marker_0a6423d01c2fa00b076f548e083a51d3 = L.marker(
+                [12.865, 74.855],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_caa8487d8c6ba5d68b5139607ec3c21d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_842fee5d719370efd7e9d7ec0d295829 = $(`<div id="html_842fee5d719370efd7e9d7ec0d295829" style="width: 100.0%; height: 100.0%;">         Artisan: Ira<br>         Village: Falnir<br>         Orders: 4         </div>`)[0];
+                popup_caa8487d8c6ba5d68b5139607ec3c21d.setContent(html_842fee5d719370efd7e9d7ec0d295829);
+            
+        
+
+        marker_0a6423d01c2fa00b076f548e083a51d3.bindPopup(popup_caa8487d8c6ba5d68b5139607ec3c21d)
+        ;
+
+        
+    
+    
+            var marker_3c3967b62249ccaa8b1e71a8ab57625f = L.marker(
+                [12.869, 74.8505],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_f8b480ea000d158f90123ab774705629 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d698fa45f1a529bea0fa6c099bbc347 = $(`<div id="html_3d698fa45f1a529bea0fa6c099bbc347" style="width: 100.0%; height: 100.0%;">         Artisan: Janani<br>         Village: Balmatta<br>         Orders: 5         </div>`)[0];
+                popup_f8b480ea000d158f90123ab774705629.setContent(html_3d698fa45f1a529bea0fa6c099bbc347);
+            
+        
+
+        marker_3c3967b62249ccaa8b1e71a8ab57625f.bindPopup(popup_f8b480ea000d158f90123ab774705629)
+        ;
+
+        
+    
+    
+            var marker_350165027f26b75753aec2d51aa17ba6 = L.marker(
+                [12.8805, 74.87],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_e53849abb429f44c76c69d185e495e4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f572618f7b6c6d14b4f34e48145a94d = $(`<div id="html_9f572618f7b6c6d14b4f34e48145a94d" style="width: 100.0%; height: 100.0%;">         Artisan: Shruthi<br>         Village: Kulshekar<br>         Orders: 7         </div>`)[0];
+                popup_e53849abb429f44c76c69d185e495e4b.setContent(html_9f572618f7b6c6d14b4f34e48145a94d);
+            
+        
+
+        marker_350165027f26b75753aec2d51aa17ba6.bindPopup(popup_e53849abb429f44c76c69d185e495e4b)
+        ;
+
+        
+    
+    
+            var marker_d0d55bba22be6a0fec1b8bf6c13bae49 = L.marker(
+                [12.93, 74.9],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_eef61f04bb83933f98b2200b98efbd78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f959a3802e6c573e5ea329d9e81e647 = $(`<div id="html_9f959a3802e6c573e5ea329d9e81e647" style="width: 100.0%; height: 100.0%;">         Artisan: Mythri<br>         Village: Vamanjoor<br>         Orders: 5         </div>`)[0];
+                popup_eef61f04bb83933f98b2200b98efbd78.setContent(html_9f959a3802e6c573e5ea329d9e81e647);
+            
+        
+
+        marker_d0d55bba22be6a0fec1b8bf6c13bae49.bindPopup(popup_eef61f04bb83933f98b2200b98efbd78)
+        ;
+
+        
+    
+    
+            var marker_b0b98f81500c2631b46bc39b2c4fd6ea = L.marker(
+                [12.816, 74.93],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_a5936ae8f564d4803d6b4594ef7563e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15666c0a0a3af9e664818484792d9a11 = $(`<div id="html_15666c0a0a3af9e664818484792d9a11" style="width: 100.0%; height: 100.0%;">         Artisan: Pavana<br>         Village: Konaje<br>         Orders: 6         </div>`)[0];
+                popup_a5936ae8f564d4803d6b4594ef7563e7.setContent(html_15666c0a0a3af9e664818484792d9a11);
+            
+        
+
+        marker_b0b98f81500c2631b46bc39b2c4fd6ea.bindPopup(popup_a5936ae8f564d4803d6b4594ef7563e7)
+        ;
+
+        
+    
+    
+            var marker_1bd3e4bb6e5b9fbb9d27ecfed9dfb51f = L.marker(
+                [12.8, 74.88],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_11fe418d4ada1d95c3ea1b10543b9a6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_594436844613d5d5a67f69bc6af9e8a1 = $(`<div id="html_594436844613d5d5a67f69bc6af9e8a1" style="width: 100.0%; height: 100.0%;">         Artisan: Apeksha<br>         Village: Deralakatte<br>         Orders: 5         </div>`)[0];
+                popup_11fe418d4ada1d95c3ea1b10543b9a6d.setContent(html_594436844613d5d5a67f69bc6af9e8a1);
+            
+        
+
+        marker_1bd3e4bb6e5b9fbb9d27ecfed9dfb51f.bindPopup(popup_11fe418d4ada1d95c3ea1b10543b9a6d)
+        ;
+
+        
+    
+    
+            var marker_ce47114ec15740551827d66e0cfbc3c2 = L.marker(
+                [12.815, 74.855],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_b1e464eab31a2b8cca5bfd7a36a0657e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f242f39e4fae4c5d73c17b50bc1102b9 = $(`<div id="html_f242f39e4fae4c5d73c17b50bc1102b9" style="width: 100.0%; height: 100.0%;">         Artisan: Sanjitha<br>         Village: Tokkottu<br>         Orders: 3         </div>`)[0];
+                popup_b1e464eab31a2b8cca5bfd7a36a0657e.setContent(html_f242f39e4fae4c5d73c17b50bc1102b9);
+            
+        
+
+        marker_ce47114ec15740551827d66e0cfbc3c2.bindPopup(popup_b1e464eab31a2b8cca5bfd7a36a0657e)
+        ;
+
+        
+    
+    
+            var marker_52e14539d6bf70d9468c1012e2be834e = L.marker(
+                [12.96, 74.82],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_eea224a977a3fa2fb47cac356458bb03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e2879473e41d726df9f17b91e537b32 = $(`<div id="html_7e2879473e41d726df9f17b91e537b32" style="width: 100.0%; height: 100.0%;">         Artisan: Mithuna<br>         Village: Katipalla<br>         Orders: 5         </div>`)[0];
+                popup_eea224a977a3fa2fb47cac356458bb03.setContent(html_7e2879473e41d726df9f17b91e537b32);
+            
+        
+
+        marker_52e14539d6bf70d9468c1012e2be834e.bindPopup(popup_eea224a977a3fa2fb47cac356458bb03)
+        ;
+
+        
+    
+    
+            var marker_4b4d9d14228ead0a6e338770bd994793 = L.marker(
+                [12.8905, 74.82],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_3f9b2c78ad5f886b7766c36f20d020fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63d23cc289d0f481dd990a5e62d4226b = $(`<div id="html_63d23cc289d0f481dd990a5e62d4226b" style="width: 100.0%; height: 100.0%;">         Artisan: Likitha<br>         Village: Urwa<br>         Orders: 4         </div>`)[0];
+                popup_3f9b2c78ad5f886b7766c36f20d020fe.setContent(html_63d23cc289d0f481dd990a5e62d4226b);
+            
+        
+
+        marker_4b4d9d14228ead0a6e338770bd994793.bindPopup(popup_3f9b2c78ad5f886b7766c36f20d020fe)
+        ;
+
+        
+    
+    
+            var marker_ea7fc00be91bbdd6891c6f640c72b6d5 = L.marker(
+                [12.9, 74.81],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_44a323ee06a546725724a8015e65401d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f57c7a9367258f464378a82d308d3228 = $(`<div id="html_f57c7a9367258f464378a82d308d3228" style="width: 100.0%; height: 100.0%;">         Artisan: Pranavi<br>         Village: Carmelaram<br>         Orders: 5         </div>`)[0];
+                popup_44a323ee06a546725724a8015e65401d.setContent(html_f57c7a9367258f464378a82d308d3228);
+            
+        
+
+        marker_ea7fc00be91bbdd6891c6f640c72b6d5.bindPopup(popup_44a323ee06a546725724a8015e65401d)
+        ;
+
+        
+    
+    
+            var marker_cab3358224391b8c4d4e7ee9456bf859 = L.marker(
+                [12.91, 74.815],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_2242f225d868dbf54f61b41928074589 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05eebbeb06680fb9944a4d07e9f50c43 = $(`<div id="html_05eebbeb06680fb9944a4d07e9f50c43" style="width: 100.0%; height: 100.0%;">         Artisan: Nayana<br>         Village: Kodikal<br>         Orders: 6         </div>`)[0];
+                popup_2242f225d868dbf54f61b41928074589.setContent(html_05eebbeb06680fb9944a4d07e9f50c43);
+            
+        
+
+        marker_cab3358224391b8c4d4e7ee9456bf859.bindPopup(popup_2242f225d868dbf54f61b41928074589)
+        ;
+
+        
+    
+    
+            var marker_eeb6ffab7263bae0b2bd0d9c1530ce5f = L.marker(
+                [12.9005, 74.835],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_578371e8e1acc4c2b028dc97d6020c93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa071da2fc2ec47f8cea55467ce6ad9d = $(`<div id="html_fa071da2fc2ec47f8cea55467ce6ad9d" style="width: 100.0%; height: 100.0%;">         Artisan: Shalini<br>         Village: Bejai<br>         Orders: 7         </div>`)[0];
+                popup_578371e8e1acc4c2b028dc97d6020c93.setContent(html_fa071da2fc2ec47f8cea55467ce6ad9d);
+            
+        
+
+        marker_eeb6ffab7263bae0b2bd0d9c1530ce5f.bindPopup(popup_578371e8e1acc4c2b028dc97d6020c93)
+        ;
+
+        
+    
+    
+            var marker_f8bd2c7e9206adb086958b88208db61d = L.marker(
+                [12.92, 74.85],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ce9b6ccb187b932e2d5114873eb2b841 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dad32b351ad6ebf568c1a397e09b51e6 = $(`<div id="html_dad32b351ad6ebf568c1a397e09b51e6" style="width: 100.0%; height: 100.0%;">         Artisan: Sangeetha<br>         Village: Yeyyadi<br>         Orders: 4         </div>`)[0];
+                popup_ce9b6ccb187b932e2d5114873eb2b841.setContent(html_dad32b351ad6ebf568c1a397e09b51e6);
+            
+        
+
+        marker_f8bd2c7e9206adb086958b88208db61d.bindPopup(popup_ce9b6ccb187b932e2d5114873eb2b841)
+        ;
+
+        
+    
+    
+            var marker_06eb230e105d9590d3d92c4343445fd2 = L.marker(
+                [12.84, 74.92],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_f2ff13e3ffba5423087ec36ea23ebd4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00c7fb83da0d4b582aa4d2383265a9c3 = $(`<div id="html_00c7fb83da0d4b582aa4d2383265a9c3" style="width: 100.0%; height: 100.0%;">         Artisan: Pavithra<br>         Village: Adyar<br>         Orders: 5         </div>`)[0];
+                popup_f2ff13e3ffba5423087ec36ea23ebd4f.setContent(html_00c7fb83da0d4b582aa4d2383265a9c3);
+            
+        
+
+        marker_06eb230e105d9590d3d92c4343445fd2.bindPopup(popup_f2ff13e3ffba5423087ec36ea23ebd4f)
+        ;
+
+        
+    
+    
+            var marker_6288e44532a31b487ce6ec64e5eba4e4 = L.marker(
+                [12.875, 74.84],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c51797eae2038b1f2fa61c18e362fd75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3feb0a9a720f5492270e8d8b9e050b9 = $(`<div id="html_d3feb0a9a720f5492270e8d8b9e050b9" style="width: 100.0%; height: 100.0%;">         Artisan: Suhana<br>         Village: Alake<br>         Orders: 6         </div>`)[0];
+                popup_c51797eae2038b1f2fa61c18e362fd75.setContent(html_d3feb0a9a720f5492270e8d8b9e050b9);
+            
+        
+
+        marker_6288e44532a31b487ce6ec64e5eba4e4.bindPopup(popup_c51797eae2038b1f2fa61c18e362fd75)
+        ;
+
+        
+    
+    
+            var marker_a39d7d82f757535c1765b473439a45f9 = L.marker(
+                [12.905, 74.84],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_eb39b72a9e2a37764a93abdea6ea32b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46d9a5d3df6592487332343373ae1200 = $(`<div id="html_46d9a5d3df6592487332343373ae1200" style="width: 100.0%; height: 100.0%;">         Artisan: Megha<br>         Village: Bijai<br>         Orders: 4         </div>`)[0];
+                popup_eb39b72a9e2a37764a93abdea6ea32b3.setContent(html_46d9a5d3df6592487332343373ae1200);
+            
+        
+
+        marker_a39d7d82f757535c1765b473439a45f9.bindPopup(popup_eb39b72a9e2a37764a93abdea6ea32b3)
+        ;
+
+        
+    
+    
+            var marker_3e48f0d778012a1d8155ab7502873ce1 = L.marker(
+                [12.8705, 74.86],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_53a49462079acdf03264cc799befa34c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3addc507c76ae75b17c75820417792e9 = $(`<div id="html_3addc507c76ae75b17c75820417792e9" style="width: 100.0%; height: 100.0%;">         Artisan: Trisha<br>         Village: Kankanady<br>         Orders: 5         </div>`)[0];
+                popup_53a49462079acdf03264cc799befa34c.setContent(html_3addc507c76ae75b17c75820417792e9);
+            
+        
+
+        marker_3e48f0d778012a1d8155ab7502873ce1.bindPopup(popup_53a49462079acdf03264cc799befa34c)
+        ;
+
+        
+    
+    
+            var marker_dae4ecddfda3520658d47e5e531cba7c = L.marker(
+                [12.8605, 74.8355],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ba54af0809e1e403576ce73ee31dac34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47f5f89a4b59496b4464c1f9df04ec78 = $(`<div id="html_47f5f89a4b59496b4464c1f9df04ec78" style="width: 100.0%; height: 100.0%;">         Artisan: Lavanya<br>         Village: Carstreet<br>         Orders: 6         </div>`)[0];
+                popup_ba54af0809e1e403576ce73ee31dac34.setContent(html_47f5f89a4b59496b4464c1f9df04ec78);
+            
+        
+
+        marker_dae4ecddfda3520658d47e5e531cba7c.bindPopup(popup_ba54af0809e1e403576ce73ee31dac34)
+        ;
+
+        
+    
+    
+            var marker_37cc5602a058559a2301f8d6ad8abf39 = L.marker(
+                [13.349, 74.7],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_7d655ba9863df74ebe9be7005a7f5361 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf837be3036fbdd118e4702be2095e64 = $(`<div id="html_cf837be3036fbdd118e4702be2095e64" style="width: 100.0%; height: 100.0%;">         Artisan: Ankitha<br>         Village: Malpe<br>         Orders: 5         </div>`)[0];
+                popup_7d655ba9863df74ebe9be7005a7f5361.setContent(html_cf837be3036fbdd118e4702be2095e64);
+            
+        
+
+        marker_37cc5602a058559a2301f8d6ad8abf39.bindPopup(popup_7d655ba9863df74ebe9be7005a7f5361)
+        ;
+
+        
+    
+    
+            var marker_e0a3d021bc00fa131d573ffea001e19c = L.marker(
+                [13.3, 74.69],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_dea92dcdebc980f6199fe696da1c1c71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_930af41ae292e808f7acb9bfc18591db = $(`<div id="html_930af41ae292e808f7acb9bfc18591db" style="width: 100.0%; height: 100.0%;">         Artisan: Nithya<br>         Village: Kodibengre<br>         Orders: 3         </div>`)[0];
+                popup_dea92dcdebc980f6199fe696da1c1c71.setContent(html_930af41ae292e808f7acb9bfc18591db);
+            
+        
+
+        marker_e0a3d021bc00fa131d573ffea001e19c.bindPopup(popup_dea92dcdebc980f6199fe696da1c1c71)
+        ;
+
+        
+    
+    
+            var marker_8f01cf7afc55f62f7f1ae99f3c90f5bf = L.marker(
+                [13.36, 74.71],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_ee32291da16428f52cdd959e93fa14f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a4f8dcac8be73393acb83e05c2493ba = $(`<div id="html_5a4f8dcac8be73393acb83e05c2493ba" style="width: 100.0%; height: 100.0%;">         Artisan: Aarohi<br>         Village: Hoode<br>         Orders: 4         </div>`)[0];
+                popup_ee32291da16428f52cdd959e93fa14f6.setContent(html_5a4f8dcac8be73393acb83e05c2493ba);
+            
+        
+
+        marker_8f01cf7afc55f62f7f1ae99f3c90f5bf.bindPopup(popup_ee32291da16428f52cdd959e93fa14f6)
+        ;
+
+        
+    
+    
+            var marker_5a84be6c1d29adfd2c71348015b711b3 = L.marker(
+                [13.28, 74.9],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_39c30248a0d6afe6c34e5fac33fad06d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de70ebc5e3d14eadc9198bdccbf0f4f2 = $(`<div id="html_de70ebc5e3d14eadc9198bdccbf0f4f2" style="width: 100.0%; height: 100.0%;">         Artisan: Ishani<br>         Village: Parkala<br>         Orders: 5         </div>`)[0];
+                popup_39c30248a0d6afe6c34e5fac33fad06d.setContent(html_de70ebc5e3d14eadc9198bdccbf0f4f2);
+            
+        
+
+        marker_5a84be6c1d29adfd2c71348015b711b3.bindPopup(popup_39c30248a0d6afe6c34e5fac33fad06d)
+        ;
+
+        
+    
+    
+            var marker_46909a61286d1c476ef230b3db0ae922 = L.marker(
+                [13.2, 74.76],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_00054a713f7af9df86aea82cd9b50bdb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24f3324a045c706ea79346bdf16558a4 = $(`<div id="html_24f3324a045c706ea79346bdf16558a4" style="width: 100.0%; height: 100.0%;">         Artisan: Diksha<br>         Village: Shankarapura<br>         Orders: 6         </div>`)[0];
+                popup_00054a713f7af9df86aea82cd9b50bdb.setContent(html_24f3324a045c706ea79346bdf16558a4);
+            
+        
+
+        marker_46909a61286d1c476ef230b3db0ae922.bindPopup(popup_00054a713f7af9df86aea82cd9b50bdb)
+        ;
+
+        
+    
+    
+            var marker_ee604e6e569600e64d06809025c9ace9 = L.marker(
+                [13.367, 74.701],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_0697563e1d4cace795090e7f5411d8d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73a582f9c8864f37ac775f426b3cf95e = $(`<div id="html_73a582f9c8864f37ac775f426b3cf95e" style="width: 100.0%; height: 100.0%;">         Artisan: Sravya<br>         Village: Kemmannu<br>         Orders: 5         </div>`)[0];
+                popup_0697563e1d4cace795090e7f5411d8d4.setContent(html_73a582f9c8864f37ac775f426b3cf95e);
+            
+        
+
+        marker_ee604e6e569600e64d06809025c9ace9.bindPopup(popup_0697563e1d4cace795090e7f5411d8d4)
+        ;
+
+        
+    
+    
+            var marker_49079395d9ff49e8f27c89a5970deaf7 = L.marker(
+                [13.43, 74.73],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_23bdab38043249e67699445d02152ece = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28bbb814f4468d8cbb21f4550ad94a3c = $(`<div id="html_28bbb814f4468d8cbb21f4550ad94a3c" style="width: 100.0%; height: 100.0%;">         Artisan: Kanishka<br>         Village: Barkur<br>         Orders: 4         </div>`)[0];
+                popup_23bdab38043249e67699445d02152ece.setContent(html_28bbb814f4468d8cbb21f4550ad94a3c);
+            
+        
+
+        marker_49079395d9ff49e8f27c89a5970deaf7.bindPopup(popup_23bdab38043249e67699445d02152ece)
+        ;
+
+        
+    
+    
+            var marker_a920d6c5f3abe70ef7530a078236d1f4 = L.marker(
+                [13.38, 74.76],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_f6f16dd48047eb0639a906b8766f327f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d02c5dbbd142cb3b9724245014ca1fe8 = $(`<div id="html_d02c5dbbd142cb3b9724245014ca1fe8" style="width: 100.0%; height: 100.0%;">         Artisan: Siri<br>         Village: Halekote<br>         Orders: 5         </div>`)[0];
+                popup_f6f16dd48047eb0639a906b8766f327f.setContent(html_d02c5dbbd142cb3b9724245014ca1fe8);
+            
+        
+
+        marker_a920d6c5f3abe70ef7530a078236d1f4.bindPopup(popup_f6f16dd48047eb0639a906b8766f327f)
+        ;
+
+        
+    
+    
+            var marker_b9a80364d72f6a0a13468f500eab2756 = L.marker(
+                [13.34, 74.75],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_a8f519e486c1b8ef9afbb831566fd1cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19cdc98ff517e3c5d47028ece3336569 = $(`<div id="html_19cdc98ff517e3c5d47028ece3336569" style="width: 100.0%; height: 100.0%;">         Artisan: Manasa<br>         Village: Ajjarkad<br>         Orders: 6         </div>`)[0];
+                popup_a8f519e486c1b8ef9afbb831566fd1cc.setContent(html_19cdc98ff517e3c5d47028ece3336569);
+            
+        
+
+        marker_b9a80364d72f6a0a13468f500eab2756.bindPopup(popup_a8f519e486c1b8ef9afbb831566fd1cc)
+        ;
+
+        
+    
+    
+            var marker_147c8c15185c59471c9eb237217718bc = L.marker(
+                [13.33, 74.74],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_0ad95956b2cb768f16c1946566ee9610 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38a4003ba7dc6b5278370c012635080f = $(`<div id="html_38a4003ba7dc6b5278370c012635080f" style="width: 100.0%; height: 100.0%;">         Artisan: Anagha<br>         Village: Ambalpady<br>         Orders: 5         </div>`)[0];
+                popup_0ad95956b2cb768f16c1946566ee9610.setContent(html_38a4003ba7dc6b5278370c012635080f);
+            
+        
+
+        marker_147c8c15185c59471c9eb237217718bc.bindPopup(popup_0ad95956b2cb768f16c1946566ee9610)
+        ;
+
+        
+    
+    
+            var marker_befc5436823b1ea63184d49b91a955fa = L.marker(
+                [13.28, 74.72],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_d5ace35a620e8dc8637019f2f93009a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae2f3e9a4c80abd0b376278c818fcd2b = $(`<div id="html_ae2f3e9a4c80abd0b376278c818fcd2b" style="width: 100.0%; height: 100.0%;">         Artisan: Suhasini<br>         Village: Mattu<br>         Orders: 4         </div>`)[0];
+                popup_d5ace35a620e8dc8637019f2f93009a5.setContent(html_ae2f3e9a4c80abd0b376278c818fcd2b);
+            
+        
+
+        marker_befc5436823b1ea63184d49b91a955fa.bindPopup(popup_d5ace35a620e8dc8637019f2f93009a5)
+        ;
+
+        
+    
+    
+            var marker_5c5b2b4b950419b6276d16441f898fa7 = L.marker(
+                [13.26, 74.78],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_967ee8e0cc1d5303b245b0ddcb94da1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2818e7b013b4065e6ab03e0592cabf4 = $(`<div id="html_d2818e7b013b4065e6ab03e0592cabf4" style="width: 100.0%; height: 100.0%;">         Artisan: Shanvi<br>         Village: Kolalagiri<br>         Orders: 5         </div>`)[0];
+                popup_967ee8e0cc1d5303b245b0ddcb94da1c.setContent(html_d2818e7b013b4065e6ab03e0592cabf4);
+            
+        
+
+        marker_5c5b2b4b950419b6276d16441f898fa7.bindPopup(popup_967ee8e0cc1d5303b245b0ddcb94da1c)
+        ;
+
+        
+    
+    
+            var marker_0297029ed68b2c4403153e5807c1cde1 = L.marker(
+                [13.24, 74.96],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_6b504cdcce349fb2b164eae847a9e6fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9993bae137a92f5f9b3b990fdaab0954 = $(`<div id="html_9993bae137a92f5f9b3b990fdaab0954" style="width: 100.0%; height: 100.0%;">         Artisan: Rakshitha<br>         Village: Hiriyadka<br>         Orders: 6         </div>`)[0];
+                popup_6b504cdcce349fb2b164eae847a9e6fd.setContent(html_9993bae137a92f5f9b3b990fdaab0954);
+            
+        
+
+        marker_0297029ed68b2c4403153e5807c1cde1.bindPopup(popup_6b504cdcce349fb2b164eae847a9e6fd)
+        ;
+
+        
+    
+    
+            var marker_6858cc6ecbed533416a145c834c70a50 = L.marker(
+                [13.22, 74.735],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_fda847b245bc831a79d50ddd3f14952b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58d47f777b564bf643e243ac46a6f84b = $(`<div id="html_58d47f777b564bf643e243ac46a6f84b" style="width: 100.0%; height: 100.0%;">         Artisan: Nisarga<br>         Village: Kaup<br>         Orders: 5         </div>`)[0];
+                popup_fda847b245bc831a79d50ddd3f14952b.setContent(html_58d47f777b564bf643e243ac46a6f84b);
+            
+        
+
+        marker_6858cc6ecbed533416a145c834c70a50.bindPopup(popup_fda847b245bc831a79d50ddd3f14952b)
+        ;
+
+        
+    
+    
+            var marker_0db73c41588775a6f40b83322188d1d0 = L.marker(
+                [13.18, 74.78],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_86fb50d0f4c0e1ee7bfd15954c06c51a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2e3d6208817eb7e7da88665da9ae103 = $(`<div id="html_d2e3d6208817eb7e7da88665da9ae103" style="width: 100.0%; height: 100.0%;">         Artisan: Bhumi<br>         Village: Padubelle<br>         Orders: 4         </div>`)[0];
+                popup_86fb50d0f4c0e1ee7bfd15954c06c51a.setContent(html_d2e3d6208817eb7e7da88665da9ae103);
+            
+        
+
+        marker_0db73c41588775a6f40b83322188d1d0.bindPopup(popup_86fb50d0f4c0e1ee7bfd15954c06c51a)
+        ;
+
+        
+    
+    
+            var marker_5b3dda56845b151e3ec339e5f9ca7669 = L.marker(
+                [13.17, 74.76],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_e79a6d701be728e2273e3ea19f7a5e5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b6622dc2476edb4758ea077b848aa90 = $(`<div id="html_7b6622dc2476edb4758ea077b848aa90" style="width: 100.0%; height: 100.0%;">         Artisan: Prarthana<br>         Village: Yermal<br>         Orders: 5         </div>`)[0];
+                popup_e79a6d701be728e2273e3ea19f7a5e5a.setContent(html_7b6622dc2476edb4758ea077b848aa90);
+            
+        
+
+        marker_5b3dda56845b151e3ec339e5f9ca7669.bindPopup(popup_e79a6d701be728e2273e3ea19f7a5e5a)
+        ;
+
+        
+    
+    
+            var marker_92791caf06ee046f29187aa7dd691287 = L.marker(
+                [13.15, 74.95],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_51140fc91d7de531f52b89400f140498 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea9385d00e0cbf85d52d71c0c8aa3043 = $(`<div id="html_ea9385d00e0cbf85d52d71c0c8aa3043" style="width: 100.0%; height: 100.0%;">         Artisan: Niharika<br>         Village: Palimar<br>         Orders: 6         </div>`)[0];
+                popup_51140fc91d7de531f52b89400f140498.setContent(html_ea9385d00e0cbf85d52d71c0c8aa3043);
+            
+        
+
+        marker_92791caf06ee046f29187aa7dd691287.bindPopup(popup_51140fc91d7de531f52b89400f140498)
+        ;
+
+        
+    
+    
+            var marker_345e3934a0a0054c334e8179335c1718 = L.marker(
+                [13.12, 74.92],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_0fdfaef11e034b94c3516fb35df458b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c6960abe1d7b36950b9cee2402e483ef = $(`<div id="html_c6960abe1d7b36950b9cee2402e483ef" style="width: 100.0%; height: 100.0%;">         Artisan: Manya<br>         Village: Ellur<br>         Orders: 5         </div>`)[0];
+                popup_0fdfaef11e034b94c3516fb35df458b1.setContent(html_c6960abe1d7b36950b9cee2402e483ef);
+            
+        
+
+        marker_345e3934a0a0054c334e8179335c1718.bindPopup(popup_0fdfaef11e034b94c3516fb35df458b1)
+        ;
+
+        
+    
+    
+            var marker_8c2dafc3eec13e8c2a8d11063e1e2b4f = L.marker(
+                [13.31, 74.77],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_0e4ff70e42f16194baa4dd95405b911a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_841e59b91eff3c0272347bfdd639add8 = $(`<div id="html_841e59b91eff3c0272347bfdd639add8" style="width: 100.0%; height: 100.0%;">         Artisan: Anvika<br>         Village: Muloor<br>         Orders: 4         </div>`)[0];
+                popup_0e4ff70e42f16194baa4dd95405b911a.setContent(html_841e59b91eff3c0272347bfdd639add8);
+            
+        
+
+        marker_8c2dafc3eec13e8c2a8d11063e1e2b4f.bindPopup(popup_0e4ff70e42f16194baa4dd95405b911a)
+        ;
+
+        
+    
+    
+            var marker_a2b922c9d7b4454c3a42dfede8758180 = L.marker(
+                [13.34, 74.76],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_c026ec632f5b16787e3381a15a05d4b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3a9a8c78a0e5a7f29c3b2071c4872f65 = $(`<div id="html_3a9a8c78a0e5a7f29c3b2071c4872f65" style="width: 100.0%; height: 100.0%;">         Artisan: Ridhima<br>         Village: Santhekatte<br>         Orders: 5         </div>`)[0];
+                popup_c026ec632f5b16787e3381a15a05d4b2.setContent(html_3a9a8c78a0e5a7f29c3b2071c4872f65);
+            
+        
+
+        marker_a2b922c9d7b4454c3a42dfede8758180.bindPopup(popup_c026ec632f5b16787e3381a15a05d4b2)
+        ;
+
+        
+    
+    
+            var marker_e8f22d30095e0dd8a44c0a2c3e322370 = L.marker(
+                [13.35, 74.74],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_23ec6d147084247972c4f4c97836b8e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6897db64759515c71eba5b0b542ec062 = $(`<div id="html_6897db64759515c71eba5b0b542ec062" style="width: 100.0%; height: 100.0%;">         Artisan: Tanisha<br>         Village: Kallianpur<br>         Orders: 6         </div>`)[0];
+                popup_23ec6d147084247972c4f4c97836b8e8.setContent(html_6897db64759515c71eba5b0b542ec062);
+            
+        
+
+        marker_e8f22d30095e0dd8a44c0a2c3e322370.bindPopup(popup_23ec6d147084247972c4f4c97836b8e8)
+        ;
+
+        
+    
+    
+            var marker_b4f526dc4de74027749af9bea23d2d4b = L.marker(
+                [13.1, 74.79],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_66aa3242cc000fbc5607628e35045b5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a27cf0de451596736d1e28944ddf33e = $(`<div id="html_9a27cf0de451596736d1e28944ddf33e" style="width: 100.0%; height: 100.0%;">         Artisan: Vaidehi<br>         Village: Katteel<br>         Orders: 5         </div>`)[0];
+                popup_66aa3242cc000fbc5607628e35045b5e.setContent(html_9a27cf0de451596736d1e28944ddf33e);
+            
+        
+
+        marker_b4f526dc4de74027749af9bea23d2d4b.bindPopup(popup_66aa3242cc000fbc5607628e35045b5e)
+        ;
+
+        
+    
+    
+            var marker_394cdb9082f182af8e7ada9713dc6a90 = L.marker(
+                [13.05, 74.97],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_8bc1c86d1c7344d183c75037a4eab8ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4c2045a0a55930c8badba52f2960286 = $(`<div id="html_b4c2045a0a55930c8badba52f2960286" style="width: 100.0%; height: 100.0%;">         Artisan: Samyuktha<br>         Village: Polali<br>         Orders: 4         </div>`)[0];
+                popup_8bc1c86d1c7344d183c75037a4eab8ab.setContent(html_b4c2045a0a55930c8badba52f2960286);
+            
+        
+
+        marker_394cdb9082f182af8e7ada9713dc6a90.bindPopup(popup_8bc1c86d1c7344d183c75037a4eab8ab)
+        ;
+
+        
+    
+    
+            var marker_e26ccac3c3688927922ffcb86b721290 = L.marker(
+                [13.02, 74.78],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_6bff5047c48c0d5a1ffb68f821e2e99e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84a4aab5d7ea126e8038ba49df20e374 = $(`<div id="html_84a4aab5d7ea126e8038ba49df20e374" style="width: 100.0%; height: 100.0%;">         Artisan: Prisha<br>         Village: Bappanadu<br>         Orders: 5         </div>`)[0];
+                popup_6bff5047c48c0d5a1ffb68f821e2e99e.setContent(html_84a4aab5d7ea126e8038ba49df20e374);
+            
+        
+
+        marker_e26ccac3c3688927922ffcb86b721290.bindPopup(popup_6bff5047c48c0d5a1ffb68f821e2e99e)
+        ;
+
+        
+    
+    
+            var marker_a9a363d507fa569495d7bd46430a2ee2 = L.marker(
+                [13.04, 74.82],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_01555df6e0de8262c026cf7c81bc37f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1d2d58cbfbe97ebaf297d30c7d71315e = $(`<div id="html_1d2d58cbfbe97ebaf297d30c7d71315e" style="width: 100.0%; height: 100.0%;">         Artisan: Yashika<br>         Village: Surinje<br>         Orders: 6         </div>`)[0];
+                popup_01555df6e0de8262c026cf7c81bc37f1.setContent(html_1d2d58cbfbe97ebaf297d30c7d71315e);
+            
+        
+
+        marker_a9a363d507fa569495d7bd46430a2ee2.bindPopup(popup_01555df6e0de8262c026cf7c81bc37f1)
+        ;
+
+        
+    
+    
+            var marker_77686b8b6463fbe71b80572dfcf83b45 = L.marker(
+                [13.01, 74.81],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_70d198a1cf0fced9ef37fdc64e0f886d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_181da607a54f3f5eb47cd5caa3c5c383 = $(`<div id="html_181da607a54f3f5eb47cd5caa3c5c383" style="width: 100.0%; height: 100.0%;">         Artisan: Navya<br>         Village: Kinnigar<br>         Orders: 5         </div>`)[0];
+                popup_70d198a1cf0fced9ef37fdc64e0f886d.setContent(html_181da607a54f3f5eb47cd5caa3c5c383);
+            
+        
+
+        marker_77686b8b6463fbe71b80572dfcf83b45.bindPopup(popup_70d198a1cf0fced9ef37fdc64e0f886d)
+        ;
+
+        
+    
+    
+            var marker_09cc56e8ca1ce9f37ea30fc536f36cb1 = L.marker(
+                [13.0, 74.78],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_9054888dcf9cb24b7535f8c0fe924e70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb245ed30238e91da7ce49873aea67d1 = $(`<div id="html_cb245ed30238e91da7ce49873aea67d1" style="width: 100.0%; height: 100.0%;">         Artisan: Sanjula<br>         Village: Hejamady<br>         Orders: 4         </div>`)[0];
+                popup_9054888dcf9cb24b7535f8c0fe924e70.setContent(html_cb245ed30238e91da7ce49873aea67d1);
+            
+        
+
+        marker_09cc56e8ca1ce9f37ea30fc536f36cb1.bindPopup(popup_9054888dcf9cb24b7535f8c0fe924e70)
+        ;
+
+        
+    
+    
+            var marker_9ed280aaedc86fd5204efe4ef22ac3a7 = L.marker(
+                [12.97, 74.76],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_70bed291a68ff74bebd0a9d6807f5717 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1a520df8a30fa421e5981daa264d9f2 = $(`<div id="html_f1a520df8a30fa421e5981daa264d9f2" style="width: 100.0%; height: 100.0%;">         Artisan: Rupali<br>         Village: Uchila<br>         Orders: 5         </div>`)[0];
+                popup_70bed291a68ff74bebd0a9d6807f5717.setContent(html_f1a520df8a30fa421e5981daa264d9f2);
+            
+        
+
+        marker_9ed280aaedc86fd5204efe4ef22ac3a7.bindPopup(popup_70bed291a68ff74bebd0a9d6807f5717)
+        ;
+
+        
+    
+    
+            var marker_00b1e464432d31872b4c8bb05db11f15 = L.marker(
+                [12.82, 74.85],
+                {
+}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+        var popup_b292921d086021507c4a7f4547a3d9c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dcf2eae9a8d08c4798e33a1c130e4dd = $(`<div id="html_7dcf2eae9a8d08c4798e33a1c130e4dd" style="width: 100.0%; height: 100.0%;">         Artisan: Akanksha<br>         Village: Someshwar<br>         Orders: 6         </div>`)[0];
+                popup_b292921d086021507c4a7f4547a3d9c7.setContent(html_7dcf2eae9a8d08c4798e33a1c130e4dd);
+            
+        
+
+        marker_00b1e464432d31872b4c8bb05db11f15.bindPopup(popup_b292921d086021507c4a7f4547a3d9c7)
+        ;
+
+        
+    
+    
+            var poly_line_a2f14e2c2fec39847aeeb075bbbe8053 = L.polyline(
+                [[13.3409, 74.7421], [12.8925, 75.0349], [12.9141, 74.856], [12.7593, 75.201], [13.0056, 75.326], [13.214, 74.9923], [13.6316, 74.69], [12.9807, 74.8075], [13.0667, 74.9952], [12.9833, 75.3], [12.561, 75.3872], [12.4996, 74.9869], [13.352, 74.7928], [13.2257, 74.7345], [13.4249, 74.746], [13.2488, 74.9921], [13.8667, 74.6333], [12.7667, 75.1167], [12.9838, 75.1714], [12.95, 75.3833], [13.866, 74.62], [13.8615, 74.809], [13.2194, 74.8786], [13.1345, 74.7822], [13.0467, 74.8012], [12.9505, 74.8123], [13.091, 74.7933], [13.3, 74.75], [13.25, 74.7], [13.3667, 74.7], [12.8056, 74.8606], [12.89, 75.03], [12.9, 74.98], [12.983, 75.28], [13.25, 74.85], [13.55, 74.7], [13.65, 74.67], [13.7, 74.65], [13.45, 74.73], [12.8167, 74.85], [12.75, 75.0667], [12.9417, 75.7842], [12.6667, 75.6], [12.983, 75.3005], [12.87, 74.84], [12.82, 74.9], [12.97, 74.8], [12.89, 74.86], [12.86, 74.85], [12.89, 74.84], [12.87, 74.845], [12.85, 74.835], [12.88, 74.83], [12.865, 74.855], [12.869, 74.8505], [12.8805, 74.87], [12.93, 74.9], [12.816, 74.93], [12.8, 74.88], [12.815, 74.855], [12.96, 74.82], [12.8905, 74.82], [12.9, 74.81], [12.91, 74.815], [12.9005, 74.835], [12.92, 74.85], [12.84, 74.92], [12.875, 74.84], [12.905, 74.84], [12.8705, 74.86], [12.8605, 74.8355], [13.349, 74.7], [13.3, 74.69], [13.36, 74.71], [13.28, 74.9], [13.2, 74.76], [13.367, 74.701], [13.43, 74.73], [13.38, 74.76], [13.34, 74.75], [13.33, 74.74], [13.28, 74.72], [13.26, 74.78], [13.24, 74.96], [13.22, 74.735], [13.18, 74.78], [13.17, 74.76], [13.15, 74.95], [13.12, 74.92], [13.31, 74.77], [13.34, 74.76], [13.35, 74.74], [13.1, 74.79], [13.05, 74.97], [13.02, 74.78], [13.04, 74.82], [13.01, 74.81], [13.0, 74.78], [12.97, 74.76], [12.82, 74.85]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_bddbf0da37bb77c6bbf844de49ee90c5);
+        
+    
+            poly_line_a2f14e2c2fec39847aeeb075bbbe8053.bindTooltip(
+                `<div>
+                     AI Optimized Rural Logistics Network
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+scikit-learn
+networkx
+folium
+openai-whisper
+edge-tts
+google-generativeai
+ultralytics
+python-dotenv
+qrcode
+pillow

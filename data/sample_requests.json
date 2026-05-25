@@ -1,0 +1,50 @@
+{
+  "storefront_generate": {
+    "product_image_path": "data/sample_basket.jpg",
+    "voice_audio_path": "data/sample_voice.wav",
+    "artisan_name": "Lakshmi",
+    "craft_district": "Kanchipuram",
+    "preferred_language": "ta"
+  },
+  "pricing_predict": {
+    "product_category": "Handwoven Basket",
+    "material_cost": 220.0,
+    "labor_hours": 9.0,
+    "artisan_experience_years": 6,
+    "district": "Kanchipuram",
+    "current_market_demand_index": 1.2,
+    "historical_prices": [780, 820, 860]
+  },
+  "voice_roundtrip": {
+    "input_audio_path": "data/sample_voice.wav",
+    "input_language": "hi",
+    "output_language": "en",
+    "response_text": "यह उत्पाद हाथ से बनाया गया है और पर्यावरण के अनुकूल है।"
+  },
+  "products_detect": {
+    "image_path": "data/sample_basket.jpg",
+    "language": "hi"
+  },
+  "demand_forecast": {
+    "product_category": "Handloom Dupatta",
+    "district": "Varanasi",
+    "language": "hi",
+    "horizon_days": 30,
+    "history": [
+      {"date": "2026-04-01", "sales": 21},
+      {"date": "2026-04-02", "sales": 20},
+      {"date": "2026-04-03", "sales": 18},
+      {"date": "2026-04-04", "sales": 25},
+      {"date": "2026-04-05", "sales": 27},
+      {"date": "2026-04-06", "sales": 22},
+      {"date": "2026-04-07", "sales": 24},
+      {"date": "2026-04-08", "sales": 23},
+      {"date": "2026-04-09", "sales": 22},
+      {"date": "2026-04-10", "sales": 21},
+      {"date": "2026-04-11", "sales": 28},
+      {"date": "2026-04-12", "sales": 30},
+      {"date": "2026-04-13", "sales": 24},
+      {"date": "2026-04-14", "sales": 25}
+    ]
+  }
+}
